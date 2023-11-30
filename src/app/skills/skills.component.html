@@ -1,0 +1,32 @@
+<main class="w-screen flex flex-column justify-content-center align-items-center">
+    <div class="w-6">
+        <h1 class="text-6xl">
+            Web Technologies & Experience
+        </h1>
+        <p class="text-xl`">
+            My area of specializiation is front end web development with the Angular Framework.
+        </p>
+        <p>
+            I also have experience with web applications and full-stack projects primariy with Node, NestJs and the technologies listed below. I enjoy an eye for detail, animations, interactive layouts and maps.
+        </p>
+        <p>
+            Visit my Linkedin for professional experience.
+        </p>
+    </div>
+
+    
+    <!-- section needs wrapper div to restrict width as flex box grows and then wraps but dom maintains width from expansion -->
+    <div class="w-9 mt-6">
+        <section class="bg-red-300 flex-grow-1 md:flex-grow-0 flex flex-row flex-wrap justify-content-center align-items-center">
+                <div *ngFor="let item of ['Ang', 'Node', 'MySql', 'No', 'PrimeNg', 
+                'Material', 'SCSS', 'HTML5', 'JS', 'TS', 'React', 
+                'VSC', 'Docker', 'Postrgres', 'Bash', 'Leaflet', 'D3'
+                ]" class="p-1 m-2  w-9rem text-4xl text-gray-200 bg-bluegray-700 font-bold text-center">
+                    {{ item }}
+                </div>
+
+        </section>
+    </div>
+</main>
+
+
