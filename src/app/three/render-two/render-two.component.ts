@@ -56,14 +56,43 @@ animateCube() {
 
   initRender() {
     this.camera = new THREE.PerspectiveCamera( 27, window.innerWidth / window.innerHeight, 5, 3500 );
-    this.camera.position.z = 2550; // todo: og 1750, 3750 looks cool
+    this.camera.position.z = this.cameraZIndex; // todo: og 1750, 3750 looks cool
 
     this.scene = new THREE.Scene();
     // this.scene.background = new THREE.Color( 0x050505 ); // bg color - 0x then Hex
 
-    this.scene.fog = new THREE.Fog( 0x050505, 2000, 3500 );
+    // this.scene.fog = new THREE.Fog( 0x050505, 2000, 3500 );
+    this.scene.fog = new THREE.Fog( 0xdfe9f3, 100 , this.cameraZIndex + 10000 );
+    // scene.fog = new THREE.Fog( 0xcccccc, 10, 15 );
+    // this.scene.fog = new THREE.FogExp2( 0xefd1b5, 0.0025 );
+    // this.scene.fog = new THREE.FogExp2( 0xff0000, 0.0003 );
 
-    //
+    // https://www.youtube.com/watch?v=otavCmIuEhY
+    const smokeTexture = new THREE.TextureLoader().load("../../../assets/img/smoke1.png");
+    smokeTexture.encoding = THREE.sRGBEncoding;
+    const smokeGeometry = new THREE.PlaneGeometry(1000, 1000); // set size of plane
+    const smokeMaterial = new THREE.MeshLambertMaterial({
+      // color: 0x00000ff // vertex color = color x colormap
+      map: smokeTexture,
+      emissive: 0x222222, // emissive light of material
+      opacity: 0.55,
+      transparent: true,
+    })
+
+    let smokeParticles = []; //make empty array to put smoke particles into
+
+    for (let i = 0; i < 2; i++ ) {
+      let smokeElement = new THREE.Mesh(smokeGeometry, smokeMaterial); // create mesh
+      smokeElement.scale.set(2,2,2); // set scale x,y,x to double
+
+      // position smoke textures at random x,y,z positions
+      smokeElement.position.set(Math.random() * 1000 - 500, Math.random() * 1000 - 500, Math.random() * 1000 - 500);
+      // set smoke texture rotations to random amounts on z axis
+      smokeElement.rotation.z = Math.random() * 360;
+
+      this.scene.add(smokeElement);
+      smokeParticles.push(smokeElement);
+    }
 
     const particles = 5000; // og: 500000, 50 looks cool and simple
 
