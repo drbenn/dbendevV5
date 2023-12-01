@@ -8,6 +8,11 @@ import * as THREE from 'three';
   styleUrls: ['./render-two.component.scss']
 })
 export class RenderTwoComponent implements OnInit {
+  renderer = new THREE.WebGLRenderer({ alpha: true }); // alpha option allows transparency
+  scene: any;
+  camera: any;
+  points: any;
+  cameraZIndex: number = 2700;
   @ViewChild('rendererContainer') rendererContainer: ElementRef | any;
   @HostListener('window:resize', ['$event'])
 	onResize(event: any) {
@@ -16,13 +21,10 @@ export class RenderTwoComponent implements OnInit {
       const aspectRatio: number = 4/3;
   this.renderer.setSize(divWidth, divWidth / aspectRatio);
   // this.renderer.setSize(this.rendererContainer.nativeElement.clientWidth, this.rendererContainer.nativeElement.clientHeight);
-  this.camera.position.z = 1000;
+  this.camera.position.z = this.cameraZIndex;
     }
 
-  renderer = new THREE.WebGLRenderer({ alpha: true }); // alpha option allows transparency
-  scene: any;
-  camera: any;
-  points: any;
+
 
   constructor() {}
 
@@ -142,7 +144,7 @@ animateCube() {
 
     this.points.rotation.x = time * 0.25;
     this.points.rotation.y = time * 0.5;
-
+    this.camera.position.z = this.cameraZIndex;
     this.renderer.render( this.scene, this.camera );
 
   }
