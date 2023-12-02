@@ -12,6 +12,8 @@ import { NavComponent } from './nav/nav.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { SkillsComponent } from './skills/skills.component';
 import { RenderTwoComponent } from './three/render-two/render-two.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ScrollingComponent } from './scrolling/scrolling.component';
 
 @NgModule({
   declarations: [
@@ -24,11 +26,12 @@ import { RenderTwoComponent } from './three/render-two/render-two.component';
     NavComponent,
     ProjectsComponent,
     SkillsComponent,
-    RenderTwoComponent
+    RenderTwoComponent,
+    ScrollingComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
