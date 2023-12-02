@@ -1,6 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
 @import "primeicons/primeicons.css";
 
+html, body {
+    scroll-behavior: smooth;
+    overflow-x:scroll;
+}
+
+// something like this should work, but doesnt
+.slow-scroll {
+    transition: scroll-behavior 5.5s ease;
+  }
+
 body {
     margin: auto;
     padding: 0rem;

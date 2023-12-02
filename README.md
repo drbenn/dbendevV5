@@ -1,3 +1,9 @@
+# Angular smoothscroll
+https://medium.com/@navyjot/smooth-scroll-in-angular-c3e9942d23a1
+https://netbasal.com/anchors-away-how-to-create-smooth-scrolling-in-angular-a657e0ea9699
+
+
+
 # DbendevV5
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.10.
