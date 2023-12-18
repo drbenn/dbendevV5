@@ -14,6 +14,9 @@ import { SkillsComponent } from './skills/skills.component';
 import { RenderTwoComponent } from './three/render-two/render-two.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ScrollingComponent } from './scrolling/scrolling.component';
+import { RenderThreeComponent } from './three/render-three/render-three.component';
+import { ObserveElementDirective } from './directives/observe-element.directive';
+
 
 @NgModule({
   declarations: [
@@ -27,7 +30,9 @@ import { ScrollingComponent } from './scrolling/scrolling.component';
     ProjectsComponent,
     SkillsComponent,
     RenderTwoComponent,
-    ScrollingComponent
+    ScrollingComponent,
+    RenderThreeComponent,
+    ObserveElementDirective
   ],
   imports: [
     BrowserModule,

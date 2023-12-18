@@ -19,6 +19,7 @@
     "@angular/platform-browser-dynamic": "^14.2.0",
     "@angular/router": "^14.2.0",
     "@types/three": "^0.158.3",
+    "intersection-observer": "^0.12.2",
     "primeflex": "^3.3.1",
     "primeicons": "^6.0.1",
     "primeng": "^14.2.3",

@@ -7,7 +7,7 @@
             My area of specializiation is front end web development with the Angular Framework.
         </p>
         <p>
-            I also have experience with web applications and full-stack projects primariy with Node, NestJs and the technologies listed below. I enjoy an eye for detail, animations, interactive layouts and maps.
+            I also have experience with web applications and full-stack projects primarily with Node, NestJs and the technologies listed below. As a self-taught web developer, previous accountant and now inactive CPA, I am always in a state of growth, learning higher level tech, or diving deeper into lower level concepts to continually improve on a wide spectrum.
         </p>
         <p>
             Visit my Linkedin for professional experience.
@@ -16,16 +16,42 @@
 
     
     <!-- section needs wrapper div to restrict width as flex box grows and then wraps but dom maintains width from expansion -->
-    <div class="w-9 mt-6">
-        <section class="bg-red-300 flex-grow-1 md:flex-grow-0 flex flex-row flex-wrap justify-content-center align-items-center">
-                <div *ngFor="let item of ['Ang', 'Node', 'MySql', 'No', 'PrimeNg', 
-                'Material', 'SCSS', 'HTML5', 'JS', 'TS', 'React', 
-                'VSC', 'Docker', 'Postrgres', 'Bash', 'Leaflet', 'D3'
-                ]" class="p-1 m-2  w-9rem text-4xl text-gray-200 bg-bluegray-700 font-bold text-center">
-                    {{ item }}
+    <div class="w-9 mt-6 bg-red-100" >
+        <div class="bg-red-300 w-5rem h-5rem">
+            <div [ngClass]="sectionInView ? 'ball' : '' "></div>
+        </div>
+        <section class="bg-green-300 flex flex-row flex-wrap justify-content-center align-items-center"
+        
+
+        
+        >   
+            <!-- <ng-container [ngClass]="sectionInView ? 'skill-anim' : '' "> -->
+                <div 
+                    class="p-1 m-2  w-9rem text-4xl text-gray-200 bg-bluegray-700 font-bold text-center"
+                    *ngFor="let item of tech; let index = index" 
+                    [ngClass]="sectionInView ? 'skill-anim' : '' "
+                    [ngStyle]=" { 'opacity': sectionInView ? '0' : '1' }"
+
+
+                >
+                    {{ item.name }}
                 </div>
 
+            <!-- </ng-container> -->
+
         </section>
+        <div *ngFor="let item of [0]; let index = index "
+        appObserveElement
+        #intersection="intersection"
+        (isIntersecting)="isIntersecting($event, 'skills', index)"
+        [isContinuous]="true"
+        
+        
+        
+        >
+
+
+        </div>
     </div>
 </main>
 
