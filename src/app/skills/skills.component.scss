@@ -15,9 +15,38 @@
     100% { transform: translateY(0); }
   }
 
+.hide-tech {
+    opacity: 0;
+}
+
+
+.skill {
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 2px;
+    background: linear-gradient(150deg, rgba(38, 74, 255, 0.374), rgba(255, 114, 250, 0.3));
+    transform:
+        perspective(800px)
+        rotateY(10deg) scale(0.9)
+        rotateX(5deg);
+    filter: opacity(90%);
+    transition: 0.3s ease-out;
+}
+
+.skill:hover {
+    transform:
+        perspective(800px)
+        rotateY(-10deg)
+        translateY(-5px)
+        rotateX(10deg)
+        scale(1);
+        filter: opacity(100%) hue-rotate(15deg);
+}
+
 .skill-anim {
     animation: skill-organize 1.5s ease-out;
+
 }
+
 
 @keyframes skill-organize {
     0% {
@@ -28,4 +57,144 @@
         transform: translate(0,0);
         opacity: 1;
     }
+}
+
+.skill-anim-angular {
+    animation: skill-org-angular 2s ease-out;
+}
+
+@keyframes skill-org-angular {
+    0% { transform: rotate(0deg) translateX(20rem) translateY(-10rem) rotate(0deg) scale(0.7);}
+    80%{ transform: rotate(-50deg) translateX(0rem) translateY(0rem) rotate(50deg) scale(0.9);}
+    100%{ transform:perspective(800px) rotateY(10deg) rotateX(5deg) scale(0.9);}
+}
+
+.skill-anim-js {
+    animation: skill-org-js 2s ease-out;
+}
+
+@keyframes skill-org-js {
+    0% { transform: rotate(0deg) translateX(15rem) translateY(15rem) rotate(0deg) scale(0.45);}
+    80%{ transform: rotate(70deg) translateX(0rem) translateY(0rem) rotate(-70deg) scale(0.9);}
+    100%{ transform:perspective(800px) rotateY(10deg) rotateX(5deg) scale(0.9);}
+}
+
+.skill-anim-ts {
+    animation: skill-org-ts 2s ease-out;
+}
+
+@keyframes skill-org-ts {
+    0% { transform: rotate(0deg) translateX(-50rem) translateY(5rem) rotate(0deg) scale(0.7);}
+    80%{ transform: rotate(-50deg) translateX(0rem) translateY(0rem) rotate(50deg) scale(0.9);}
+    100%{ transform:perspective(800px) rotateY(10deg) rotateX(5deg) scale(0.9);}
+}
+
+.skill-anim-node {
+    animation: skill-org-node 2s ease-out;
+}
+
+@keyframes skill-org-node {
+    0% { transform: rotate(0deg) translateX(-50rem) translateY(5rem) rotate(0deg) scale(0.7);}
+    80%{ transform: rotate(-50deg) translateX(0rem) translateY(0rem) rotate(50deg) scale(0.9);}
+    100%{ transform:perspective(800px) rotateY(10deg) rotateX(5deg) scale(0.9);}
+}
+
+.skill-anim-react {
+    animation: skill-org-react 2s ease-out;
+}
+
+@keyframes skill-org-react {
+    0% { transform: rotate(0deg) translateX(-50rem) translateY(5rem) rotate(0deg) scale(0.7);}
+    80%{ transform: rotate(-50deg) translateX(0rem) translateY(0rem) rotate(50deg) scale(0.9);}
+    100%{ transform:perspective(800px) rotateY(10deg) rotateX(5deg) scale(0.9);}
+}
+
+.skill-anim-sql {
+    animation: skill-org-sql 2s ease-out;
+}
+
+@keyframes skill-org-sql {
+    0% { transform: rotate(0deg) translateX(-50rem) translateY(5rem) rotate(0deg) scale(0.7);}
+    80%{ transform: rotate(-50deg) translateX(0rem) translateY(0rem) rotate(50deg) scale(0.9);}
+    100%{ transform:perspective(800px) rotateY(10deg) rotateX(5deg) scale(0.9);}
+}
+
+.skill-anim-git {
+    animation: skill-org-git 2s ease-out;
+}
+
+@keyframes skill-org-git {
+    0% { transform: rotate(0deg) translateX(-50rem) translateY(5rem) rotate(0deg) scale(0.7);}
+    80%{ transform: rotate(-50deg) translateX(0rem) translateY(0rem) rotate(50deg) scale(0.9);}
+    100%{ transform:perspective(800px) rotateY(10deg) rotateX(5deg) scale(0.9);}
+}
+
+.skill-anim-vsc {
+    animation: skill-org-vsc 2s ease-out;
+}
+
+@keyframes skill-org-vsc {
+    0% { transform: rotate(0deg) translateX(-50rem) translateY(5rem) rotate(0deg) scale(0.7);}
+    80%{ transform: rotate(-50deg) translateX(0rem) translateY(0rem) rotate(50deg) scale(0.9);}
+    100%{ transform:perspective(800px) rotateY(10deg) rotateX(5deg) scale(0.9);}
+}
+
+.skill-anim-sql {
+    animation: skill-org-sql 2s ease-out;
+}
+
+@keyframes skill-org-sql {
+    0% { transform: rotate(0deg) translateX(-50rem) translateY(5rem) rotate(0deg) scale(0.7);}
+    80%{ transform: rotate(-50deg) translateX(0rem) translateY(0rem) rotate(50deg) scale(0.9);}
+    100%{ transform:perspective(800px) rotateY(10deg) rotateX(5deg) scale(0.9);}
+}
+
+.skill-anim-jira {
+    animation: skill-org-jira 2s ease-out;
+}
+
+@keyframes skill-org-jira {
+    0% { transform: rotate(0deg) translateX(-50rem) translateY(5rem) rotate(0deg) scale(0.7);}
+    80%{ transform: rotate(-50deg) translateX(0rem) translateY(0rem) rotate(50deg) scale(0.9);}
+    100%{ transform:perspective(800px) rotateY(10deg) rotateX(5deg) scale(0.9);}
+}
+
+.skill-anim-html {
+    animation: skill-org-html 2s ease-out;
+}
+
+@keyframes skill-org-html {
+    0% { transform: rotate(0deg) translateX(-50rem) translateY(5rem) rotate(0deg) scale(0.7);}
+    80%{ transform: rotate(-50deg) translateX(0rem) translateY(0rem) rotate(50deg) scale(0.9);}
+    100%{ transform:perspective(800px) rotateY(10deg) rotateX(5deg) scale(0.9);}
+}
+
+.skill-anim-sass {
+    animation: skill-org-sass 2s ease-out;
+}
+
+@keyframes skill-org-sass {
+    0% { transform: rotate(0deg) translateX(-50rem) translateY(5rem) rotate(0deg) scale(0.7);}
+    80%{ transform: rotate(-50deg) translateX(0rem) translateY(0rem) rotate(50deg) scale(0.9);}
+    100%{ transform:perspective(800px) rotateY(10deg) rotateX(5deg) scale(0.9);}
+}
+
+.skill-anim-docker {
+    animation: skill-org-docker 2s ease-out;
+}
+
+@keyframes skill-org-docker {
+    0% { transform: rotate(0deg) translateX(-50rem) translateY(5rem) rotate(0deg) scale(0.7);}
+    80%{ transform: rotate(-50deg) translateX(0rem) translateY(0rem) rotate(50deg) scale(0.9);}
+    100%{ transform:perspective(800px) rotateY(10deg) rotateX(5deg) scale(0.9);}
+}
+
+.skill-anim-postgres {
+    animation: skill-org-postgres 2s ease-out;
+}
+
+@keyframes skill-org-postgres {
+    0% { transform: rotate(0deg) translateX(-50rem) translateY(5rem) rotate(0deg) scale(0.7);}
+    80%{ transform: rotate(-50deg) translateX(0rem) translateY(0rem) rotate(50deg) scale(0.9);}
+    100%{ transform:perspective(800px) rotateY(10deg) rotateX(5deg) scale(0.9);}
 }

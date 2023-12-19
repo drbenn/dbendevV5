@@ -16,25 +16,38 @@
 
     
     <!-- section needs wrapper div to restrict width as flex box grows and then wraps but dom maintains width from expansion -->
-    <div class="w-9 mt-6 bg-red-100" >
-        <div class="bg-red-300 w-5rem h-5rem">
+    <div class="w-9 mt-6" >
+        <div class="w-5rem h-5rem">
             <div [ngClass]="sectionInView ? 'ball' : '' "></div>
         </div>
-        <section class="bg-green-300 flex flex-row flex-wrap justify-content-center align-items-center"
-        
+        <section 
+            class="w-full flex flex-row flex-wrap justify-content-center align-items-center"
+            [ngStyle]="{'height': '45rem'}"
 
         
         >   
+        <!-- bg-bluegray-700 -->
             <!-- <ng-container [ngClass]="sectionInView ? 'skill-anim' : '' "> -->
                 <div 
-                    class="p-1 m-2  w-9rem text-4xl text-gray-200 bg-bluegray-700 font-bold text-center"
+                    class="skill m-1 w-9rem h-9rem flex flex-column flex-nowrap justify-content-end align-items-center"
                     *ngFor="let item of tech; let index = index" 
-                    [ngClass]="sectionInView ? 'skill-anim' : '' "
-                    [ngStyle]=" { 'opacity': sectionInView ? '0' : '1' }"
+                    [ngClass]="sectionInView ? item.enterAnimClass : 'hide-tech' "
+                    [ngStyle]=" { 'opacity': sectionInView ? '1' : '0' }"
+                    [ngStyle]=" {}"
 
 
                 >
+
+                    <div class="w-5rem h-5rem p-1 cursor-pointer">
+                        <img 
+                            class="h-full w-full" 
+                            [style]="{'filter' : 'brightness(1.2)'}"
+                            [src]="item.imgUrl"
+                        >
+                    </div>
+                    <div class="mb-2 mt-1 text-base text-white font-light">
                     {{ item.name }}
+                    </div>
                 </div>
 
             <!-- </ng-container> -->
