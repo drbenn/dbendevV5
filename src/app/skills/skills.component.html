@@ -17,12 +17,12 @@
     
     <!-- section needs wrapper div to restrict width as flex box grows and then wraps but dom maintains width from expansion -->
     <div class="w-9 mt-6" >
-        <div class="w-5rem h-5rem">
+        <!-- <div class="w-5rem h-5rem">
             <div [ngClass]="sectionInView ? 'ball' : '' "></div>
-        </div>
+        </div> -->
         <section 
             class="w-full flex flex-row flex-wrap justify-content-center align-items-center"
-            [ngStyle]="{'height': '45rem'}"
+            [ngStyle]="{'height': 'fit-content'}"
 
         
         >   
@@ -31,7 +31,7 @@
                 <div 
                     class="skill m-1 w-9rem h-9rem flex flex-column flex-nowrap justify-content-end align-items-center"
                     *ngFor="let item of tech; let index = index" 
-                    [ngClass]="sectionInView ? item.enterAnimClass : 'hide-tech' "
+                    [ngClass]="sectionInView ? item.enterAnimClass : item.startPosClass "
                     [ngStyle]=" { 'opacity': sectionInView ? '1' : '0' }"
                     [ngStyle]=" {}"
 

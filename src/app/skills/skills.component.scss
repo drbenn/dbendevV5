@@ -15,9 +15,11 @@
     100% { transform: translateY(0); }
   }
 
-.hide-tech {
-    opacity: 0;
-}
+// Generate 5 random numbers between 40 and 60
+
+// .hide-tech {
+//     opacity: 0;
+// }
 
 
 .skill {
@@ -59,14 +61,41 @@
     }
 }
 
+
+
+
+$random-degree-angular: (random(720) - 360) + 0deg;
+$random-x-angular: (random(25) - 50) + 0rem;
+$random-y-angular: (random(25) - 50) + 0rem;
+$random-scale-angular:(random(10) * 0.1);
+
+.skill-start-angular {
+    transform: rotate(0deg) translateX($random-x-angular) translateY($random-y-angular) rotate(0deg) scale($random-scale-angular);
+}
+
 .skill-anim-angular {
     animation: skill-org-angular 2s ease-out;
 }
 
 @keyframes skill-org-angular {
-    0% { transform: rotate(0deg) translateX(20rem) translateY(-10rem) rotate(0deg) scale(0.7);}
-    80%{ transform: rotate(-50deg) translateX(0rem) translateY(0rem) rotate(50deg) scale(0.9);}
+    0% { transform: rotate(0deg) translateX($random-x-angular) translateY($random-y-angular) rotate(0deg) scale($random-scale-angular);}
+    80%{ transform: rotate(-$random-degree-angular) translateX(0rem) translateY(0rem) rotate($random-degree-angular) scale(0.9);}
     100%{ transform:perspective(800px) rotateY(10deg) rotateX(5deg) scale(0.9);}
+}
+
+
+
+
+
+
+
+$random-degree-js: (random(720) - 360) + 0deg;
+$random-x-js: (random(25) - 50) + 0rem;
+$random-y-js: (random(25) - 50) + 0rem;
+$random-scale-js:(random(10) * 0.1);
+
+.skill-start-js {
+    transform: rotate(0deg) translateX($random-x-js) translateY($random-y-js) rotate(0deg) scale($random-scale-js);
 }
 
 .skill-anim-js {
@@ -74,9 +103,23 @@
 }
 
 @keyframes skill-org-js {
-    0% { transform: rotate(0deg) translateX(15rem) translateY(15rem) rotate(0deg) scale(0.45);}
-    80%{ transform: rotate(70deg) translateX(0rem) translateY(0rem) rotate(-70deg) scale(0.9);}
+    0% { transform: rotate(0deg) translateX($random-x-js) translateY($random-y-js) rotate(0deg) scale($random-scale-js);}
+    80%{ transform: rotate(-$random-degree-js) translateX(0rem) translateY(0rem) rotate($random-degree-js) scale(0.9);}
     100%{ transform:perspective(800px) rotateY(10deg) rotateX(5deg) scale(0.9);}
+}
+
+
+
+
+
+
+$random-degree-ts: (random(720) - 360) + 0deg;
+$random-x-ts: (random(25) - 50) + 0rem;
+$random-y-ts: (random(25) - 50) + 0rem;
+$random-scale-ts:(random(10) * 0.1);
+
+.skill-start-ts {
+    transform: rotate(0deg) translateX($random-x-ts) translateY($random-y-ts) rotate(0deg) scale($random-scale-ts);
 }
 
 .skill-anim-ts {
@@ -84,9 +127,24 @@
 }
 
 @keyframes skill-org-ts {
-    0% { transform: rotate(0deg) translateX(-50rem) translateY(5rem) rotate(0deg) scale(0.7);}
-    80%{ transform: rotate(-50deg) translateX(0rem) translateY(0rem) rotate(50deg) scale(0.9);}
+    0% { transform: rotate(0deg) translateX($random-x-ts) translateY($random-y-ts) rotate(0deg) scale($random-scale-ts);}
+    80%{ transform: rotate(-$random-degree-ts) translateX(0rem) translateY(0rem) rotate($random-degree-ts) scale(0.9);}
     100%{ transform:perspective(800px) rotateY(10deg) rotateX(5deg) scale(0.9);}
+}
+
+
+
+
+
+
+
+$random-degree-node: (random(720) - 360) + 0deg;
+$random-x-node: (random(25) - 50) + 0rem;
+$random-y-node: (random(25) - 50) + 0rem;
+$random-scale-node:(random(10) * 0.1);
+
+.skill-start-node {
+    transform: rotate(0deg) translateX($random-x-node) translateY($random-y-node) rotate(0deg) scale($random-scale-node);
 }
 
 .skill-anim-node {
@@ -94,9 +152,24 @@
 }
 
 @keyframes skill-org-node {
-    0% { transform: rotate(0deg) translateX(-50rem) translateY(5rem) rotate(0deg) scale(0.7);}
-    80%{ transform: rotate(-50deg) translateX(0rem) translateY(0rem) rotate(50deg) scale(0.9);}
+    0% { transform: rotate(0deg) translateX($random-x-node) translateY($random-y-node) rotate(0deg) scale($random-scale-node);}
+    80%{ transform: rotate(-$random-degree-node) translateX(0rem) translateY(0rem) rotate($random-degree-node) scale(0.9);}
     100%{ transform:perspective(800px) rotateY(10deg) rotateX(5deg) scale(0.9);}
+}
+
+
+
+
+
+
+
+$random-degree-react: (random(720) - 360) + 0deg;
+$random-x-react: (random(25) - 50) + 0rem;
+$random-y-react: (random(25) - 50) + 0rem;
+$random-scale-react:(random(10) * 0.1);
+
+.skill-start-react {
+    transform: rotate(0deg) translateX($random-x-react) translateY($random-y-react) rotate(0deg) scale($random-scale-react);
 }
 
 .skill-anim-react {
@@ -104,19 +177,26 @@
 }
 
 @keyframes skill-org-react {
-    0% { transform: rotate(0deg) translateX(-50rem) translateY(5rem) rotate(0deg) scale(0.7);}
-    80%{ transform: rotate(-50deg) translateX(0rem) translateY(0rem) rotate(50deg) scale(0.9);}
+    0% { transform: rotate(0deg) translateX($random-x-react) translateY($random-y-react) rotate(0deg) scale($random-scale-react);}
+    80%{ transform: rotate(-$random-degree-react) translateX(0rem) translateY(0rem) rotate($random-degree-react) scale(0.9);}
     100%{ transform:perspective(800px) rotateY(10deg) rotateX(5deg) scale(0.9);}
 }
 
-.skill-anim-sql {
-    animation: skill-org-sql 2s ease-out;
-}
 
-@keyframes skill-org-sql {
-    0% { transform: rotate(0deg) translateX(-50rem) translateY(5rem) rotate(0deg) scale(0.7);}
-    80%{ transform: rotate(-50deg) translateX(0rem) translateY(0rem) rotate(50deg) scale(0.9);}
-    100%{ transform:perspective(800px) rotateY(10deg) rotateX(5deg) scale(0.9);}
+
+
+
+
+
+
+
+$random-degree-git: (random(720) - 360) + 0deg;
+$random-x-git: (random(25) - 50) + 0rem;
+$random-y-git: (random(25) - 50) + 0rem;
+$random-scale-git:(random(10) * 0.1);
+
+.skill-start-git {
+    transform: rotate(0deg) translateX($random-x-git) translateY($random-y-git) rotate(0deg) scale($random-scale-git);
 }
 
 .skill-anim-git {
@@ -124,9 +204,23 @@
 }
 
 @keyframes skill-org-git {
-    0% { transform: rotate(0deg) translateX(-50rem) translateY(5rem) rotate(0deg) scale(0.7);}
-    80%{ transform: rotate(-50deg) translateX(0rem) translateY(0rem) rotate(50deg) scale(0.9);}
+    0% { transform: rotate(0deg) translateX($random-x-git) translateY($random-y-git) rotate(0deg) scale($random-scale-git);}
+    80%{ transform: rotate(-$random-degree-git) translateX(0rem) translateY(0rem) rotate($random-degree-git) scale(0.9);}
     100%{ transform:perspective(800px) rotateY(10deg) rotateX(5deg) scale(0.9);}
+}
+
+
+
+
+
+
+$random-degree-vsc: (random(720) - 360) + 0deg;
+$random-x-vsc: (random(25) - 50) + 0rem;
+$random-y-vsc: (random(25) - 50) + 0rem;
+$random-scale-vsc:(random(10) * 0.1);
+
+.skill-start-vsc {
+    transform: rotate(0deg) translateX($random-x-vsc) translateY($random-y-vsc) rotate(0deg) scale($random-scale-vsc);
 }
 
 .skill-anim-vsc {
@@ -134,9 +228,22 @@
 }
 
 @keyframes skill-org-vsc {
-    0% { transform: rotate(0deg) translateX(-50rem) translateY(5rem) rotate(0deg) scale(0.7);}
-    80%{ transform: rotate(-50deg) translateX(0rem) translateY(0rem) rotate(50deg) scale(0.9);}
+    0% { transform: rotate(0deg) translateX($random-x-vsc) translateY($random-y-vsc) rotate(0deg) scale($random-scale-vsc);}
+    80%{ transform: rotate(-$random-degree-vsc) translateX(0rem) translateY(0rem) rotate($random-degree-vsc) scale(0.9);}
     100%{ transform:perspective(800px) rotateY(10deg) rotateX(5deg) scale(0.9);}
+}
+
+
+
+
+
+$random-degree-sql: (random(720) - 360) + 0deg;
+$random-x-sql: (random(25) - 50) + 0rem;
+$random-y-sql: (random(25) - 50) + 0rem;
+$random-scale-sql:(random(10) * 0.1);
+
+.skill-start-sql {
+    transform: rotate(0deg) translateX($random-x-sql) translateY($random-y-sql) rotate(0deg) scale($random-scale-sql);
 }
 
 .skill-anim-sql {
@@ -144,9 +251,22 @@
 }
 
 @keyframes skill-org-sql {
-    0% { transform: rotate(0deg) translateX(-50rem) translateY(5rem) rotate(0deg) scale(0.7);}
-    80%{ transform: rotate(-50deg) translateX(0rem) translateY(0rem) rotate(50deg) scale(0.9);}
+    0% { transform: rotate(0deg) translateX($random-x-sql) translateY($random-y-sql) rotate(0deg) scale($random-scale-sql);}
+    80%{ transform: rotate(-$random-degree-sql) translateX(0rem) translateY(0rem) rotate($random-degree-sql) scale(0.9);}
     100%{ transform:perspective(800px) rotateY(10deg) rotateX(5deg) scale(0.9);}
+}
+
+
+
+
+
+$random-degree-jira: (random(720) - 360) + 0deg;
+$random-x-jira: (random(25) - 50) + 0rem;
+$random-y-jira: (random(25) - 50) + 0rem;
+$random-scale-jira:(random(10) * 0.1);
+
+.skill-start-jira {
+    transform: rotate(0deg) translateX($random-x-jira) translateY($random-y-jira) rotate(0deg) scale($random-scale-jira);
 }
 
 .skill-anim-jira {
@@ -154,9 +274,22 @@
 }
 
 @keyframes skill-org-jira {
-    0% { transform: rotate(0deg) translateX(-50rem) translateY(5rem) rotate(0deg) scale(0.7);}
-    80%{ transform: rotate(-50deg) translateX(0rem) translateY(0rem) rotate(50deg) scale(0.9);}
+    0% { transform: rotate(0deg) translateX($random-x-jira) translateY($random-y-jira) rotate(0deg) scale($random-scale-jira);}
+    80%{ transform: rotate(-$random-degree-jira) translateX(0rem) translateY(0rem) rotate($random-degree-jira) scale(0.9);}
     100%{ transform:perspective(800px) rotateY(10deg) rotateX(5deg) scale(0.9);}
+}
+
+
+
+
+
+$random-degree-html: (random(720) - 360) + 0deg;
+$random-x-html: (random(25) - 50) + 0rem;
+$random-y-html: (random(25) - 50) + 0rem;
+$random-scale-html:(random(10) * 0.1);
+
+.skill-start-html {
+    transform: rotate(0deg) translateX($random-x-html) translateY($random-y-html) rotate(0deg) scale($random-scale-html);
 }
 
 .skill-anim-html {
@@ -164,9 +297,21 @@
 }
 
 @keyframes skill-org-html {
-    0% { transform: rotate(0deg) translateX(-50rem) translateY(5rem) rotate(0deg) scale(0.7);}
-    80%{ transform: rotate(-50deg) translateX(0rem) translateY(0rem) rotate(50deg) scale(0.9);}
+    0% { transform: rotate(0deg) translateX($random-x-html) translateY($random-y-html) rotate(0deg) scale($random-scale-html);}
+    80%{ transform: rotate(-$random-degree-html) translateX(0rem) translateY(0rem) rotate($random-degree-html) scale(0.9);}
     100%{ transform:perspective(800px) rotateY(10deg) rotateX(5deg) scale(0.9);}
+}
+
+
+
+
+$random-degree-sass: (random(720) - 360) + 0deg;
+$random-x-sass: (random(25) - 50) + 0rem;
+$random-y-sass: (random(25) - 50) + 0rem;
+$random-scale-sass:(random(10) * 0.1);
+
+.skill-start-sass {
+    transform: rotate(0deg) translateX($random-x-sass) translateY($random-y-sass) rotate(0deg) scale($random-scale-sass);
 }
 
 .skill-anim-sass {
@@ -174,9 +319,21 @@
 }
 
 @keyframes skill-org-sass {
-    0% { transform: rotate(0deg) translateX(-50rem) translateY(5rem) rotate(0deg) scale(0.7);}
-    80%{ transform: rotate(-50deg) translateX(0rem) translateY(0rem) rotate(50deg) scale(0.9);}
+    0% { transform: rotate(0deg) translateX($random-x-sass) translateY($random-y-sass) rotate(0deg) scale($random-scale-sass);}
+    80%{ transform: rotate(-$random-degree-sass) translateX(0rem) translateY(0rem) rotate($random-degree-sass) scale(0.9);}
     100%{ transform:perspective(800px) rotateY(10deg) rotateX(5deg) scale(0.9);}
+}
+
+
+
+
+$random-degree-docker: (random(720) - 360) + 0deg;
+$random-x-docker: (random(25) - 50) + 0rem;
+$random-y-docker: (random(25) - 50) + 0rem;
+$random-scale-docker:(random(10) * 0.1);
+
+.skill-start-docker {
+    transform: rotate(0deg) translateX($random-x-docker) translateY($random-y-docker) rotate(0deg) scale($random-scale-docker);
 }
 
 .skill-anim-docker {
@@ -184,9 +341,20 @@
 }
 
 @keyframes skill-org-docker {
-    0% { transform: rotate(0deg) translateX(-50rem) translateY(5rem) rotate(0deg) scale(0.7);}
-    80%{ transform: rotate(-50deg) translateX(0rem) translateY(0rem) rotate(50deg) scale(0.9);}
+    0% { transform: rotate(0deg) translateX($random-x-docker) translateY($random-y-docker) rotate(0deg) scale($random-scale-docker);}
+    80%{ transform: rotate(-$random-degree-docker) translateX(0rem) translateY(0rem) rotate($random-degree-docker) scale(0.9);}
     100%{ transform:perspective(800px) rotateY(10deg) rotateX(5deg) scale(0.9);}
+}
+
+
+
+$random-degree-postgres: (random(720) - 360) + 0deg;
+$random-x-postgres: (random(25) - 50) + 0rem;
+$random-y-postgres: (random(25) - 50) + 0rem;
+$random-scale-postgres:(random(10) * 0.1);
+
+.skill-start-postgres {
+    transform: rotate(0deg) translateX($random-x-postgres) translateY($random-y-postgres) rotate(0deg) scale($random-scale-postgres);
 }
 
 .skill-anim-postgres {
@@ -194,7 +362,7 @@
 }
 
 @keyframes skill-org-postgres {
-    0% { transform: rotate(0deg) translateX(-50rem) translateY(5rem) rotate(0deg) scale(0.7);}
-    80%{ transform: rotate(-50deg) translateX(0rem) translateY(0rem) rotate(50deg) scale(0.9);}
+    0% { transform: rotate(0deg) translateX($random-x-postgres) translateY($random-y-postgres) rotate(0deg) scale($random-scale-postgres);}
+    80%{ transform: rotate(-$random-degree-postgres) translateX(0rem) translateY(0rem) rotate($random-degree-postgres) scale(0.9);}
     100%{ transform:perspective(800px) rotateY(10deg) rotateX(5deg) scale(0.9);}
 }
