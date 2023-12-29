@@ -1,0 +1,46 @@
+.left-text-position {
+    position: absolute;
+    z-index: 5;
+    top: 20%;
+    left: 10%;
+}
+
+.right-threejs-position {
+    position: absolute;
+    z-index: 4;
+    top: 30%;
+    left: 25%;
+}
+
+.intro-text-size {
+    font-size: 5rem;
+}
+
+
+.intro-gradient-1 {
+    // font-size: 6rem;
+    background: -webkit-linear-gradient(45deg, #044bff, #7700c7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.intro-gradient-2 {
+    // font-size: 72px;
+    background: -webkit-linear-gradient(45deg, #ff0404, #001289);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+
+.blink-hard {
+animation: blinker 1s step-end infinite;
+}
+.blink-soft {
+animation: blinker 1.5s linear infinite;
+}
+@keyframes blinker {
+50% {
+    opacity: 0;
+}
+}
