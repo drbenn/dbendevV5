@@ -21,9 +21,30 @@
 
     <div class="flex flex-row flex-wrap bg-red-600">
         <ng-container *ngFor="let project of projects" >
-            <div class="h-8rem w-8rem bg-yellow-200 p-4 m-4">
+            <!-- <div class="h-8rem w-8rem bg-yellow-200 p-4 m-4">
                 {{ project.title }}
-            </div>
+            </div> -->
+            <p-card [style]="{width: '200px'}" styleClass="p-card-shadow" class="m-1">
+                <div>
+                    {{ project.title }} 
+                </div>
+                <div  class="w-4rem h-4rem bg-red-200">
+                    <img alt="Card" [src]="project.img" [ngStyle]="{'height': '4rem'}">
+                </div>
+                <div>
+                    {{ project.timeLine }}
+                </div>
+                <div>
+                    {{ project.tech }}
+                </div>
+                <div>
+                    {{ project.oneLine }}
+                </div>
+                <!-- <ng-template pTemplate="footer">
+                    <p-button label="Save" icon="pi pi-check"></p-button>
+                    <p-button label="Cancel" icon="pi pi-times" styleClass="p-button-secondary" [style]="{'margin-left': '.5em'}"></p-button>
+                </ng-template> -->
+            </p-card>
         </ng-container>
     </div>
 

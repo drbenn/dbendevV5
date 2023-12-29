@@ -17,8 +17,13 @@ export class ProjectsComponent implements OnInit {
 
   ngOnInit(): void {
     this.dataService.initData().pipe(take(1)).subscribe((data: any) => {
-      console.log(this.projects);
-      this.projects = data;
+      const newToOld: any[] = [];
+      if (data && data.length) {
+        data.forEach((item:any) => {
+          newToOld.unshift(item)
+        });
+      };
+      this.projects = newToOld;
     });
     
   }
