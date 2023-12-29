@@ -1,9 +1,33 @@
 
-<div class="w-screen flex flex-row flex-wrap bg-blue-900 p-6">
+<div class="w-screen flex flex-row flex-wrap bg-blue-900 p-6"
+    [ngStyle]="{'min-height': '105vh'}"
+>
     <ng-container *ngFor="let project of projects" >
         <div class="h-8rem w-8rem bg-yellow-200 p-4 m-4">
             {{ project.title }}
         </div>
     </ng-container>
+
+    <h5>Modal</h5>
+<p-button (click)="showModalDialog()" icon="pi pi-external-link" label="Show"></p-button>
+<p-dialog 
+    header="Header" 
+    [visible]="displayModal" 
+    [modal]="true" 
+    [style]="{width: '50vw'}"
+    [draggable]="false" 
+    [resizable]="false"
+    >
+    <p class="m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae totam doloribus voluptatum voluptas dolore facilis, minima maxime excepturi quia qui. Labore id at voluptates officia inventore placeat reprehenderit iusto explicabo ex. Iusto libero odit tempora, quibusdam cumque optio necessitatibus laboriosam, nam voluptates, nesciunt animi! Vel laboriosam architecto repellendus quibusdam ut fugiat, autem amet quo fuga adipisci sapiente animi ducimus, sequi ad quis dolorem optio quod aliquid earum? Aperiam libero quasi quas dignissimos fuga, ad odit expedita illo. Hic omnis rem magnam sed quasi? Tempore earum qui autem quos dolore adipisci sequi a repellendus, amet quas exercitationem beatae cum error recusandae, deserunt accusamus doloremque culpa id expedita ea vel. Deleniti, voluptatibus, praesentium, mollitia eveniet alias illo error aliquid id asperiores adipisci hic! Nam odio laboriosam itaque facilis. Cupiditate eveniet sint, nostrum sapiente ex molestiae perspiciatis! Necessitatibus, harum eius ratione veniam perspiciatis explicabo illum odit sequi inventore officia, sed delectus veritatis iste! Iure molestias, rem esse ducimus nihil impedit fuga beatae consectetur mollitia, maxime repudiandae aliquam incidunt debitis ipsa vel eligendi, nobis quos iusto est non ipsam sapiente ex! Provident quis eum nihil reiciendis suscipit doloremque amet ullam commodi ea explicabo officiis et, est ducimus quibusdam totam non! Rem obcaecati ratione tenetur aliquid quidem asperiores soluta magni atque animi? Blanditiis, molestias distinctio totam dolore molestiae obcaecati expedita rem laudantium voluptatibus repellendus dolor iste voluptates ratione, similique nemo modi laboriosam ea eligendi ex, delectus nesciunt? Officia vitae voluptatum iusto adipisci similique ratione inventore tempora perspiciatis earum autem veniam, amet corporis voluptatem cupiditate fugit exercitationem in! Assumenda necessitatibus quas nisi officia ipsam praesentium sit libero quia ipsum modi sequi soluta alias rerum, numquam commodi similique exercitationem unde in porro nihil deleniti quibusdam facere consectetur? Quibusdam rem pariatur voluptatem hic ab, debitis quaerat temporibus explicabo maxime iure quod labore eos? Nesciunt a delectus minima natus.√
+        </p>
+        <ng-template pTemplate="footer">
+        <p-button icon="pi pi-check" (click)="displayModal=false" label="Ok" styleClass="p-button-text"></p-button>
+        </ng-template>
+</p-dialog>
 
 </div>

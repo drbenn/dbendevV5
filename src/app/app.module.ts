@@ -16,6 +16,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { ScrollingComponent } from './scrolling/scrolling.component';
 import { RenderThreeComponent } from './three/render-three/render-three.component';
 import { ObserveElementDirective } from './directives/observe-element.directive';
+import {DialogModule} from 'primeng/dialog';
+import {ButtonModule} from 'primeng/button';
 
 
 @NgModule({
@@ -36,7 +38,9 @@ import { ObserveElementDirective } from './directives/observe-element.directive'
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    DialogModule,
+    ButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

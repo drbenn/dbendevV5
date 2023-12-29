@@ -9,6 +9,7 @@ import { take } from 'rxjs';
 })
 export class ProjectsComponent implements OnInit {
   projects: any;
+  displayModal!: boolean;;
 
   constructor(
     private dataService: ProjectDataService
@@ -21,5 +22,9 @@ export class ProjectsComponent implements OnInit {
     });
     
   }
+
+  protected showModalDialog() {
+    this.displayModal = true;
+}
 
 }

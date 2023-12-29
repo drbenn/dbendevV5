@@ -12,28 +12,28 @@ export class SkillsComponent implements OnInit {
 
   tech: {name:string, imgUrl: string, enterAnimClass?: string, startPosClass: string, endPosClass: string}[] = [
     {
-      name: 'Ang',
+      name: 'Angular',
       imgUrl: '../assets/img/tech/angular.png',
       enterAnimClass: 'skill-anim-angular',
       startPosClass: 'skill-start-angular',
       endPosClass: '',
     },
     {
-      name: 'JS',
+      name: 'Javascript',
       imgUrl: '../assets/img/tech/js.png',
       enterAnimClass: 'skill-anim-js',
       startPosClass: 'skill-start-js',
       endPosClass: '',
     },
     {
-      name: 'TS',
+      name: 'Typescript',
       imgUrl: '../assets/img/tech/ts.png',
       enterAnimClass: 'skill-anim-ts',
       startPosClass: 'skill-start-ts',
       endPosClass: '',
     },
     {
-      name: 'Node',
+      name: 'NodeJs',
       imgUrl: '../assets/img/tech/node.png',
       enterAnimClass: 'skill-anim-node',
       startPosClass: 'skill-start-node',
@@ -47,8 +47,8 @@ export class SkillsComponent implements OnInit {
       endPosClass: '',
     },
     {
-      name: 'MySQL',
-      imgUrl: '../assets/img/tech/sql2.png',
+      name: 'SQL',
+      imgUrl: '../assets/img/tech/sql3.png',
       enterAnimClass: 'skill-anim-sql',
       startPosClass: 'skill-start-sql',
       endPosClass: '',
@@ -61,7 +61,7 @@ export class SkillsComponent implements OnInit {
       endPosClass: '',
     },
     {
-      name: 'VSC',
+      name: 'Visual Studio Code',
       imgUrl: '../assets/img/tech/vsc.png',
       enterAnimClass: 'skill-anim-vsc',
       startPosClass: 'skill-start-vsc',
@@ -95,13 +95,13 @@ export class SkillsComponent implements OnInit {
       startPosClass: 'skill-start-docker',
       endPosClass: '',
     },
-    {
-      name: 'Postgres',
-      imgUrl: '../assets/img/tech/postgres.png',
-      enterAnimClass: 'skill-anim-postgres',
-      startPosClass: 'skill-start-postgres',
-      endPosClass: '',
-    }
+    // {
+    //   name: 'Postgres',
+    //   imgUrl: '../assets/img/tech/postgres.png',
+    //   enterAnimClass: 'skill-anim-postgres',
+    //   startPosClass: 'skill-start-postgres',
+    //   endPosClass: '',
+    // }
   ]
 
   constructor(  

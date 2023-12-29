@@ -1,3 +1,4 @@
+import { ViewportScroller } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,14 +7,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./nav.component.scss']
 })
 export class NavComponent implements OnInit {
+  protected leftCurlies: string = '{{';
+  protected rightCurlies: string  = '}}';
 
-  constructor() { }
+  constructor(private viewportScroller: ViewportScroller) { }
 
   ngOnInit(): void {
   }
 
-  protected navigateHome() {
-    // this.router.navigate(['home']);
-  };
+  onClickScroll(elementId: string): void {
+    console.log(elementId);
+    
+    this.viewportScroller.scrollToAnchor(elementId.toString())
+  }
 
 }
