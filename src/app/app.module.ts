@@ -18,6 +18,7 @@ import { RenderThreeComponent } from './three/render-three/render-three.componen
 import { ObserveElementDirective } from './directives/observe-element.directive';
 import {DialogModule} from 'primeng/dialog';
 import {ButtonModule} from 'primeng/button';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -40,7 +41,8 @@ import {ButtonModule} from 'primeng/button';
     BrowserModule,
     HttpClientModule,
     DialogModule,
-    ButtonModule
+    ButtonModule, 
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
