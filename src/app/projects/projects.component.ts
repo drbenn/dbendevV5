@@ -28,8 +28,12 @@ export class ProjectsComponent implements OnInit {
     
   }
 
-  protected showModalDialog() {
+  protected showModalDialog(): void {
     this.displayModal = true;
-}
+  };
+
+  protected dialogClose(): void {
+    this.displayModal = false; 
+  };
 
 }

@@ -8,13 +8,15 @@ import { Component, HostListener, OnInit } from '@angular/core';
 })
 export class NavComponent implements OnInit {
   protected isMobileView: boolean = false;
+  protected visibleSidebar!: boolean;
   protected leftCurlies: string = '{{';
   protected rightCurlies: string  = '}}';
+
 
   @HostListener('window:resize', ['$event'])
   onResize(event: any) {
     const width = event.target.innerWidth;
-    if (width && width < 500 ) {
+    if (width && width < 700 ) {
       this.isMobileView = true;
     } else {
       this.isMobileView = false;
@@ -24,12 +26,20 @@ export class NavComponent implements OnInit {
   constructor(private viewportScroller: ViewportScroller) { }
 
   ngOnInit(): void {
-  }
+    if (window.innerWidth < 700) {
+      this.isMobileView = true;
+    } else {
+      this.isMobileView = false;
+    };
+  };
 
-  onClickScroll(elementId: string): void {
+  protected onClickScroll(elementId: string): void {
     console.log(elementId);
     
     this.viewportScroller.scrollToAnchor(elementId.toString())
-  }
+  };
 
+  protected sidebarClose(): void {
+    this.visibleSidebar = false; 
+  };
 }
