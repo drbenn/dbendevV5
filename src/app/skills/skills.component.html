@@ -33,19 +33,19 @@
             >
             </div>
             <div 
-                class="skill m-1 w-9rem h-9rem flex flex-column flex-nowrap justify-content-end align-items-center"
+                class="skill m-1 w-5rem h-6rem flex flex-column flex-nowrap justify-content-end align-items-center"
                 *ngFor="let item of tech; let index = index" 
                 [ngClass]="sectionInView ? item.enterAnimClass : item.startPosClass "
                 [ngStyle]=" { 'opacity': sectionInView ? '1' : '0' }"
             >
-                <div class="w-5rem h-5rem p-1 cursor-pointer">
+                <div class="w-3rem h-3rem p-1 cursor-pointer">
                     <img 
                         class="h-full w-full" 
                         [style]="{'filter' : 'brightness(1.2)'}"
                         [src]="item.imgUrl"
                     >
                 </div>
-                <div class="mb-2 mt-1 text-base text-white font-light">
+                <div class="mb-2 mt-1 text-sm text-white font-base">
                 {{ item.name }}
                 </div>
             </div>

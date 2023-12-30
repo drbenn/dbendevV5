@@ -19,14 +19,14 @@ export class SkillsComponent implements OnInit {
       endPosClass: '',
     },
     {
-      name: 'Javascript',
+      name: 'JavaScript',
       imgUrl: '../assets/img/tech/js.png',
       enterAnimClass: 'skill-anim-js',
       startPosClass: 'skill-start-js',
       endPosClass: '',
     },
     {
-      name: 'Typescript',
+      name: 'TypeScript',
       imgUrl: '../assets/img/tech/ts.png',
       enterAnimClass: 'skill-anim-ts',
       startPosClass: 'skill-start-ts',
@@ -61,7 +61,7 @@ export class SkillsComponent implements OnInit {
       endPosClass: '',
     },
     {
-      name: 'Visual Studio Code',
+      name: 'VS Code',
       imgUrl: '../assets/img/tech/vsc.png',
       enterAnimClass: 'skill-anim-vsc',
       startPosClass: 'skill-start-vsc',
@@ -152,7 +152,7 @@ export class SkillsComponent implements OnInit {
       endPosClass: '',
     },
     {
-      name: 'Angular Material',
+      name: 'Material',
       imgUrl: '../assets/img/tech/material.png',
       enterAnimClass: 'skill-anim-docker',
       startPosClass: 'skill-start-docker',
