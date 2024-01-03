@@ -1,0 +1,15 @@
+.card-image {
+    // background-image: url("../../assets/img/projects/history/mtlt.png");
+    background-size: cover;
+    height: 8rem;
+    background-repeat: no-repeat;
+    background-position: center; 
+    transform: scale(1.0);
+    transition: ease-in 200ms;
+}
+
+.card-image:hover {
+    transform: scale(1.04);
+    filter: brightness(106%);
+    transition: ease-in 200ms;
+}

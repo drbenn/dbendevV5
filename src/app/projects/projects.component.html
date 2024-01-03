@@ -5,32 +5,24 @@
 
 
 
-<p-button (click)="showModalDialog()" icon="pi pi-external-link" label="Show"></p-button>
-<p-dialog 
-    header="Project History" 
-    [visible]="displayModal" 
-    [modal]="true" 
-    [style]="{width: '50vw'}"
-    [draggable]="true" 
-    [resizable]="true"
-    (close)="dialogClose()"
-    [closable]="true"
-    >
+    <p-button (click)="visibleProjectsSidebar = true" icon="pi pi-external-link" label="Show"></p-button>
+
+</main>
+<!-- [ngStyle]="getInlineStyle(project.img)" -->
+    <p-sidebar [visible]="visibleProjectsSidebar" [fullScreen]="true" [baseZIndex]="10000" (onHide)="projectsSidebarClose()" [showCloseIcon]="true">
     <p class="m-0">
         A listing of all previous projects sorted new to old, a peek into my journey and progression as a developer.
     </p>
 
-    <div class="flex flex-row flex-wrap bg-red-600">
+    <div class="flex flex-row flex-wrap">
         <ng-container *ngFor="let project of projects" >
-            <!-- <div class="h-8rem w-8rem bg-yellow-200 p-4 m-4">
-                {{ project.title }}
-            </div> -->
-            <p-card [style]="{width: '200px'}" styleClass="p-card-shadow" class="m-1">
+            <p-card [style]="{width: '260px'}" styleClass="p-card-shadow" class="m-1">
                 <div>
                     {{ project.title }} 
                 </div>
-                <div  class="w-4rem h-4rem bg-red-200">
-                    <img alt="Card" [src]="project.img" [ngStyle]="{'height': '4rem'}">
+                <div  class="card-image" [style.backgroundImage]="'url(' + project.img + ')'"
+                >
+                    <!-- <img alt="Card" class="card-image" > -->
                 </div>
                 <div>
                     {{ project.timeLine }}
@@ -41,18 +33,10 @@
                 <div>
                     {{ project.oneLine }}
                 </div>
-                <!-- <ng-template pTemplate="footer">
-                    <p-button label="Save" icon="pi pi-check"></p-button>
-                    <p-button label="Cancel" icon="pi pi-times" styleClass="p-button-secondary" [style]="{'margin-left': '.5em'}"></p-button>
-                </ng-template> -->
             </p-card>
         </ng-container>
     </div>
 
-        <!-- <ng-template pTemplate="footer">
-        <p-button icon="pi pi-check" (click)="displayModal=false" label="Ok" styleClass="p-button-text"></p-button>
-        </ng-template> -->
-</p-dialog>
 
-</main>
+
 
