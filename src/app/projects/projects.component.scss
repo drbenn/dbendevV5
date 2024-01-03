@@ -13,3 +13,9 @@
     filter: brightness(106%);
     transition: ease-in 200ms;
 }
+
+.title-gradient {
+    background: -webkit-linear-gradient(45deg, #f8dfff, #ffffff), #ffbeef;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

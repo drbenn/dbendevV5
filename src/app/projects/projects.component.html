@@ -14,25 +14,30 @@
         A listing of all previous projects sorted new to old, a peek into my journey and progression as a developer.
     </p>
 
-    <div class="flex flex-row flex-wrap">
+    <div class="flex flex-row flex-wrap justify-content-between justify-content-center">
         <ng-container *ngFor="let project of projects" >
-            <p-card [style]="{width: '260px'}" styleClass="p-card-shadow" class="m-1">
-                <div>
-                    {{ project.title }} 
-                </div>
-                <div  class="card-image" [style.backgroundImage]="'url(' + project.img + ')'"
-                >
-                    <!-- <img alt="Card" class="card-image" > -->
-                </div>
-                <div>
-                    {{ project.timeLine }}
-                </div>
-                <div>
-                    {{ project.tech }}
-                </div>
-                <div>
-                    {{ project.oneLine }}
-                </div>
+            <p-card [style]="{width: '300px', height: '350px'}" styleClass="p-card-shadow" class="m-3">
+                <section class="px-3 h-screen">
+                    <div class="text-left text-lg title-gradient font-semibold">
+                        {{ project.title }} 
+                    </div>
+                    <div  class="mt-2 card-image" [style.backgroundImage]="'url(' + project.img + ')'"
+                    >
+                        <!-- <img alt="Card" class="card-image" > -->
+                    </div>
+                    <div class="h-full flex flex-nowrap flex-column justify-content-betwen align-items-start">
+                        <div class="text-sm font-light mt-2">
+                            {{ project.tech }}
+                        </div>
+                        <div class="text-sm font-light mt-2">
+                            {{ project.oneLine }}
+                        </div>
+                        <div class="text-right text-sm font-light mt-2">
+                            {{ project.timeLine }}
+                        </div>
+                    </div>
+
+                </section>
             </p-card>
         </ng-container>
     </div>
