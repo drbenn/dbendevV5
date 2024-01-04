@@ -16,24 +16,42 @@
 
     <div class="flex flex-row flex-wrap justify-content-between justify-content-center">
         <ng-container *ngFor="let project of projects" >
-            <p-card [style]="{width: '300px', height: '350px'}" styleClass="p-card-shadow" class="m-3">
+            <p-card [style]="{width: '290px', height: '320px'}" styleClass="p-card-shadow" class="m-3">
                 <section class="px-3 h-screen">
-                    <div class="text-left text-lg title-gradient font-semibold">
-                        {{ project.title }} 
+                    <div class="w-full flex flex-nowrap flex-row justify-content-between align-items-center">
+                        <div class="text-left text-base title-gradient font-semibold">
+                            {{ project.title }} 
+                        </div>
+                        <div class="text-xs text-white-alpha-40 font-light">
+                            {{ project.timeLine }}
+                        </div>
+
                     </div>
                     <div  class="mt-2 card-image" [style.backgroundImage]="'url(' + project.img + ')'"
                     >
                         <!-- <img alt="Card" class="card-image" > -->
                     </div>
-                    <div class="h-full flex flex-nowrap flex-column justify-content-betwen align-items-start">
-                        <div class="text-sm font-light mt-2">
+                    <div class="h-6rem flex flex-nowrap flex-column justify-content-between align-items-start">
+                        <div class="text-xs tech-gradient font-light mt-2">
                             {{ project.tech }}
                         </div>
-                        <div class="text-sm font-light mt-2">
+                        <div class="mt-2 text-sm font-light">
                             {{ project.oneLine }}
                         </div>
-                        <div class="text-right text-sm font-light mt-2">
-                            {{ project.timeLine }}
+
+                        <div class="mt-2 w-full flex flex-nowrap flex-row justify-content-between align-items-center">
+                            <div *ngIf="project.gitLink.length === 1">
+                                <a href="">Git Repo</a>
+                            </div>
+                            <div *ngIf="project.gitLink.length > 1">
+                                Git Repo 
+                                <span *ngFor="let link of project.gitLink; let index = index">
+                                    -<a [href]="link">{{ index + 1 }}</a>
+                                </span>
+                            </div>
+                            <div>
+                                <a [href]="project.demoLink">Demo</a>
+                            </div>
                         </div>
                     </div>
 

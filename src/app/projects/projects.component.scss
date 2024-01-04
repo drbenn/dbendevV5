@@ -8,14 +8,30 @@
     transition: ease-in 200ms;
 }
 
-.card-image:hover {
-    transform: scale(1.04);
-    filter: brightness(106%);
-    transition: ease-in 200ms;
+p-card {
+    transition: ease-in 80ms;
+    transform: scale(1);
 }
+
+p-card:hover {
+    transition: ease-in 80ms;
+    transform: scale(1.05);
+}
+
+// .card-image:hover {
+//     transform: scale(1.04);
+//     filter: brightness(106%);
+//     transition: ease-in 200ms;
+// }
 
 .title-gradient {
     background: -webkit-linear-gradient(45deg, #f8dfff, #ffffff), #ffbeef;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.tech-gradient {
+    background: -webkit-linear-gradient(60deg, #d84efe, #3927ff), #ff2ecb;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
