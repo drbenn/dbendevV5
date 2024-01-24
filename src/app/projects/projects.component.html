@@ -1,11 +1,13 @@
 
-<main class="w-screen flex flex-row flex-wrap bg-blue-900 p-6"
+<main class="flex flex-row flex-wrap p-6 bg-transition"
     [ngStyle]="{'min-height': '105vh'}"
+    [ngClass]="activeBg === 'grad-1' ? 'grad-1' : 'grad-2'"
 >
 
 
 
     <p-button (click)="visibleProjectsSidebar = true" icon="pi pi-external-link" label="Show"></p-button>
+    <p-button (click)="changeBg()" icon="pi pi-globe" label="Change BG"></p-button>
 
 </main>
 <!-- [ngStyle]="getInlineStyle(project.img)" -->

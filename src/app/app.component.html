@@ -1,22 +1,30 @@
-<main class="flex flex-column justify-content-center align-items-center"
-[ngStyle]="{'width': '99vw', 'overflowX': 'hidden'}"
+<main class="w-full h-screen flex flex-column justify-content-center align-items-center border-3 border-solid border-red-400"
+
 >
-  <app-nav class="w-full" id="scroll-to-nav"></app-nav>
+  <app-nav 
+    class="w-full" 
+    id="scroll-to-nav"
+  ></app-nav>
 
   <app-intro
-    [ngStyle]="{'width': '99vw', 'overflowX': 'hidden'}"
+    [ngStyle]="{'width': '99vw'}"
   ></app-intro>
 
-  <app-projects id="scroll-to-projects"
-    [ngStyle]="{'width': '99vw', 'overflowX': 'hidden'}"
+  <app-projects 
+    id="scroll-to-projects"
+    [ngStyle]="{'width': '99vw'}"
   ></app-projects>
 
-  <app-skills id="scroll-to-skills"
-    [ngStyle]="{'width': '99vw', 'overflowX': 'hidden'}"
+  <app-skills 
+    id="scroll-to-skills"
+    [ngStyle]="{'width': '99vw'}"
   ></app-skills>
 
-  <app-contact id="scroll-to-contact"></app-contact>
+  <app-contact
+    id="scroll-to-contact"
+    [ngStyle]="{'width': '99vw'}"
+  ></app-contact>
 
-  <app-footer></app-footer>
+  <!-- <app-footer></app-footer> -->
   
 </main>

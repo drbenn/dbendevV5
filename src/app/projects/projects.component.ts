@@ -62,4 +62,13 @@ export class ProjectsComponent implements OnInit {
     }
   }
 
+  activeBg: string = 'grad-1';
+  changeBg() {
+    if (this.activeBg === 'grad-1') {
+      this.activeBg = 'grad-2'
+    } else {
+      this.activeBg = 'grad-1'
+    }
+  }
+
 }
