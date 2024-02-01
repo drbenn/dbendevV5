@@ -3,3 +3,9 @@
     // margin: 0rem;
     // padding: 0rem;
 }
+
+// if theme dark one need to add following to angular.json -> styles
+// "./node_modules/primeng/resources/themes/mdc-dark-indigo/theme.css",
+
+//else
+//              "./node_modules/primeng/resources/themes/mdc-light-indigo/theme.css",

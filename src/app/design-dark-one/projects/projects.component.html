@@ -1,0 +1,67 @@
+
+<main class="flex flex-row flex-wrap p-6 bg-transition"
+    [ngStyle]="{'min-height': '105vh'}"
+    [ngClass]="activeBg === 'grad-1' ? 'grad-1' : 'grad-2'"
+>
+
+
+
+    <p-button (click)="visibleProjectsSidebar = true" icon="pi pi-external-link" label="Show"></p-button>
+    <p-button (click)="changeBg()" icon="pi pi-globe" label="Change BG"></p-button>
+
+</main>
+<!-- [ngStyle]="getInlineStyle(project.img)" -->
+    <p-sidebar [visible]="visibleProjectsSidebar" [fullScreen]="true" [baseZIndex]="10000" (onHide)="projectsSidebarClose()" [showCloseIcon]="true">
+    <p class="m-0">
+        A listing of all previous projects sorted new to old, a peek into my journey and progression as a developer.
+    </p>
+
+    <div class="flex flex-row flex-wrap justify-content-between justify-content-center">
+        <ng-container *ngFor="let project of projects" >
+            <p-card [style]="{width: '290px', height: '320px'}" styleClass="p-card-shadow" class="m-3">
+                <section class="px-3 h-screen">
+                    <div class="w-full flex flex-nowrap flex-row justify-content-between align-items-center">
+                        <div class="text-left text-base title-gradient font-semibold">
+                            {{ project.title }} 
+                        </div>
+                        <div class="text-xs text-white-alpha-40 font-light">
+                            {{ project.timeLine }}
+                        </div>
+
+                    </div>
+                    <div  class="mt-2 card-image" [style.backgroundImage]="'url(' + project.img + ')'"
+                    >
+                        <!-- <img alt="Card" class="card-image" > -->
+                    </div>
+                    <div class="h-6rem flex flex-nowrap flex-column justify-content-between align-items-start">
+                        <div class="text-xs tech-gradient font-light mt-2">
+                            {{ project.tech }}
+                        </div>
+                        <div class="mt-2 text-sm font-light">
+                            {{ project.oneLine }}
+                        </div>
+
+                        <div class="mt-2 w-full flex flex-nowrap flex-row justify-content-between align-items-center">
+                            <div *ngIf="project.gitLink.length === 1">
+                                <a href="">Git Repo</a>
+                            </div>
+                            <div *ngIf="project.gitLink.length > 1">
+                                Git Repo 
+                                <span *ngFor="let link of project.gitLink; let index = index">
+                                    -<a [href]="link">{{ index + 1 }}</a>
+                                </span>
+                            </div>
+                            <div>
+                                <a [href]="project.demoLink">Demo</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+            </p-card>
+        </ng-container>
+    </div>
+
+
+
+

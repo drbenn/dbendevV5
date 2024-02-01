@@ -1,0 +1,28 @@
+nav {
+    display: flex;
+    // background-color: #f2f2f2;
+    // padding: 10px 20px;
+    // box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    // background-color: rgba(0, 0, 255, 0.152);
+
+    // https://hype4.academy/tools/glassmorphism-generator
+    // glassorphism
+    background: rgba( 18, 18, 18, 0.7 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 13px );
+    -webkit-backdrop-filter: blur( 13px );
+    // border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+  
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+  
+nav li {
+    display: inline-block;
+    margin-right: 20px;
+    cursor: pointer;
+}

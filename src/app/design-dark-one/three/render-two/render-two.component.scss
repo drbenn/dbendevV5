@@ -1,0 +1,22 @@
+.three-container {
+    // height: 25rem; // maintains 4:3 aspect ratio (height is 75% of width)
+    // width: 34rem;
+    // height: 20vw;
+    // width: 25vw;
+    // border: 1px solid red;
+    // height: 20rem;
+    // width: 10rem;
+    // height: 24rem;
+    // width: 35rem;
+    min-height: 20rem;
+    min-width: 16rem;
+    max-height: 100%;
+    max-width: 100%;
+    height: 35vw;
+    width: 25vw;
+    // height: clamp( 25vw , );
+    // width: clamp(, 25vw, );
+    color: #d19d9d00;
+    filter: blur(0.6px);
+    background-color: rgba(0, 128, 0, 0.458);
+  }

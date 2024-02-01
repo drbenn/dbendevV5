@@ -1,0 +1,14 @@
+<p>scrolling works!</p>
+
+
+    <ng-container *ngFor="let i of [0,1,2,3,4,5]; let idx = index" class="">
+        <div class="w-screen h-screen text-5xl text-center"
+            [ngStyle]="{'background-color': colors[idx]}"
+            [id]="i"
+            (click)="onClickScroll(idx + 1)"
+        >
+            {{ i }}
+        </div>
+    
+    </ng-container>
+

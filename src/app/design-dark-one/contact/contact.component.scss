@@ -1,0 +1,31 @@
+.contact-gradient {
+
+}
+
+h1 {
+    font-size: 72px;
+    background: -webkit-linear-gradient(45deg, #04ff86, #520089);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+
+  
+  .dot-mask {
+    // position: absolute;
+    inset: 0;
+    height: 20rem;
+    width: 30rem;
+    background-image: radial-gradient(#a30095 1px, transparent 1px);
+    background-size: 16px 16px;
+    -webkit-mask-image: radial-gradient(
+      ellipse 50% 50% at 50% 50%,
+      #000 60%,
+      transparent 100%
+    );
+    mask-image: radial-gradient(
+      ellipse 50% 50% at 50% 50%,
+      #000 60%,
+      transparent 100%
+    );
+  }

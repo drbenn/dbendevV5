@@ -1,0 +1,56 @@
+<main class="flex flex-column justify-content-center align-items-center py-8"
+    [ngStyle]="{'min-height': '105vh'}"
+>
+
+    <div class="m:w-12 md:w-10 xl:w-8 flex flex-column justify-content-center align-items-center bg-blue-800">
+        <div class="w-full px-4 mb-6 text-start">
+            <h1 class="text-6xl">
+                Web Technologies & Experience
+            </h1>
+            <span class="text-lg font-light">
+                <p>
+                    My area of specializiation is front end web development with the Angular Framework.
+                </p>
+                <p>
+                    I also have experience with web applications and full-stack projects primarily with Node, NestJs and the technologies listed below. As a self-taught web developer, previous accountant and now inactive CPA, I am always in a state of growth, expanding my knowledge and it's applications..
+                </p>
+                <p>
+                    Visit my LinkedIn for professional experience.
+                </p>
+            </span>
+        </div>
+
+    
+        <!-- section needs wrapper div to restrict width as flex box grows and then wraps but dom maintains width from expansion -->
+        <section 
+            class="w-full flex flex-row flex-wrap justify-content-center align-items-center bg-green-400"
+        >   
+            <div *ngFor="let item of [0]; let index = index "
+                appObserveElement
+                #intersection="intersection"
+                (isIntersecting)="isIntersecting($event, 'skills', index)"
+                [isContinuous]="true" 
+            >
+            </div>
+            <div 
+                class="skill m-1 w-5rem h-6rem flex flex-column flex-nowrap justify-content-end align-items-center"
+                *ngFor="let item of tech; let index = index" 
+                [ngClass]="sectionInView ? item.enterAnimClass : item.startPosClass "
+                [ngStyle]=" { 'opacity': sectionInView ? '1' : '0' }"
+            >
+                <div class="w-3rem h-3rem p-1 cursor-pointer">
+                    <img 
+                        class="h-full w-full" 
+                        [style]="{'filter' : 'brightness(1.2)'}"
+                        [src]="item.imgUrl"
+                    >
+                </div>
+                <div class="mb-2 mt-1 text-sm text-white font-base">
+                {{ item.name }}
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+
+
