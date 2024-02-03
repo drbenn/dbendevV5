@@ -1,31 +1,19 @@
-/* You can add global styles to this file, and also import other style files */
 @import "primeicons/primeicons.css";
+// @use '../src/styles/variables' as vars;
 
 html, body {
+    margin: auto;
     scroll-behavior: smooth;
+    width: 100%;
+    box-sizing: border-box;
+
 }
 
 // something like this should work, but doesnt
 .slow-scroll {
     transition: scroll-behavior 5.5s ease;
-  }
-
-// design-dark-one body
-// body {
-//     margin: auto;
-//     padding: 0rem;
-//     // width: 90%;
-//     background-color: #141416;
-//     color: #f0f8ff;
-//     font-family: 'Source Sans 3', sans-serif;
-// }
-
-// design-light-twp body
-body {
-    margin: auto;
-    padding: 0rem;
-    // width: 90%;
-    background-color: #ffffff00;
-    color: rgb(16, 16, 16);
-    font-family: 'Source Sans 3', sans-serif;
 }
+
+// body {
+//     font-family: 'Roboto', sans-serif;
+// }

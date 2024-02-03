@@ -1,0 +1,61 @@
+@use '../../styles/variables' as vars;
+
+
+nav {
+    background-color: vars.$global-white;
+    padding-bottom: 3rem;
+    box-shadow: 0 8px 12px 0 rgba( 31, 38, 135, 0.075 );
+    backdrop-filter: blur( 13px );
+    -webkit-backdrop-filter: blur( 13px );
+    color: vars.$global-text;
+    // box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    // border-radius: 10px;
+    // border: 1px solid rgba( 255, 255, 255, 0.18 );
+
+}
+  
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+  
+nav li {
+    display: inline-block;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.height-0 {
+    height: 0px;
+}
+
+.sticky-nav {
+    position: fixed;
+    top: 0px;
+    z-index: 5;
+    width: 100%;
+    background-color: vars.$global-sticky-nav-bg;
+    // box-shadow: 0 8px 12px 0 rgba( 31, 38, 135, 0.075 );
+    // border-bottom: 1px solid rgba(48, 48, 48, 0.206);
+    backdrop-filter: blur( 13px );
+    -webkit-backdrop-filter: blur( 13px );
+    transition: top 0.15s linear;
+}
+
+.pre-sticky-nav {
+    position: fixed;
+    top: 38px;
+    z-index: 5;
+    width: 100%;
+    background-color: vars.$global-sticky-nav-bg;
+    // box-shadow: 0 8px 12px 0 rgba( 31, 38, 135, 0.075 );
+    // border-bottom: 1px solid rgba(48, 48, 48, 0.206);
+    backdrop-filter: blur( 13px );
+    -webkit-backdrop-filter: blur( 13px );
+    backdrop-filter: saturate(180%) blur(20px);
+    transition: top 0.15s linear;
+}
+
+
+

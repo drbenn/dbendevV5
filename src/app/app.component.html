@@ -1,2 +1,39 @@
-<!-- <app-design-dark-one></app-design-dark-one> -->
-<design-light-two></design-light-two>
+<navigation [isMobileView]="isMobileView" [yScrollPosition]="yScrollPosition"></navigation>
+<main class="w-full flex flex-column flex-nowrap justify-content-start align-items-center">
+  <!-- <div class=""> -->
+    <div class="w-full splash pt-8 flex flex-column flex-nowrap justify-content-start align-items-center">
+      <section class="w-9 flex flex-column flex-nowrap justify-content-center align-items-end">
+        <div>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, alias, ea, voluptates reiciendis dolore iste magnam nemo mollitia quibusdam excepturi eos amet facere sit nisi tempore. Perspiciatis adipisci tempore dolorum molestias nesciunt possimus quidem quas! Provident quas, perspiciatis, a aliquid cupiditate deleniti sapiente animi beatae natus debitis reiciendis qui libero.
+        </div>
+      </section>
+
+      <div class="text-center"
+      [ngStyle]="{'padding-top':'50rem'}"
+      >
+      <img src="../assets/img/misc/jr-korpa-9XngoIpxcEo-unsplash.jpg" alt=""
+      [ngStyle]="{'width': heroWidth, 'border-radius': heroRadius, 'filter': heroGrayscale }"
+    
+      appObserveElement
+      #intersection="intersection"
+      (isIntersecting)="isIntersecting($event, 'hero-img')"
+      [isContinuous]="true" 
+      >
+    </div>
+  </div>
+
+
+  <app-skills></app-skills>
+
+
+
+
+  <!-- </div> -->
+  <!-- <div class="app-bg">
+  </div> -->
+
+
+</main>
+
+
+

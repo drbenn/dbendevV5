@@ -229,6 +229,7 @@ export class SkillsComponent implements OnInit {
     console.log('Element #' + index + ' is intersecting ' + status + ' : ITEM: ' + item)
     console.log('section in view: ', this.sectionInView);
     console.log(event);
+    console.log(trigger);
     
     if (status === true && trigger === 'skills' && index === 0 ) {
 

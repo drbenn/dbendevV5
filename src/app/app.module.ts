@@ -14,16 +14,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { ScrollingComponent } from './design-dark-one/scrolling/scrolling.component';
 import { RenderThreeComponent } from './design-dark-one/three/render-three/render-three.component';
 import { ObserveElementDirective } from './directives/observe-element.directive';
-import {DialogModule} from 'primeng/dialog';
-import {ButtonModule} from 'primeng/button';
+import { DialogModule } from 'primeng/dialog';
+import { ButtonModule } from 'primeng/button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {CardModule} from 'primeng/card';
 import {SidebarModule} from 'primeng/sidebar';
 import { DesignDarkOneComponent } from './design-dark-one/design-dark-one.component';
 import { AboutComponent } from './design-dark-one/about/about.component';
 import { ContactComponent } from './design-dark-one/contact/contact.component';
-import { DesignLightTwoComponent } from './design-light-two/design-light-two.component';
-import { NavigationComponent } from './design-light-two/navigation/navigation.component';
+import { NavigationComponent } from './navigation/navigation.component';
 
 
 @NgModule({
@@ -42,7 +41,6 @@ import { NavigationComponent } from './design-light-two/navigation/navigation.co
     RenderThreeComponent,
     ObserveElementDirective,
     DesignDarkOneComponent,
-    DesignLightTwoComponent,
     NavigationComponent
   ],
   imports: [
