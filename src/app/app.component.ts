@@ -19,6 +19,11 @@ export class AppComponent implements OnInit {
   // array items scroll
   protected arrayItems: any = {};
 
+  // link highlight
+  protected linkOne: boolean = true;
+  protected linkTwo: boolean = false;
+  protected linkThree: boolean = false;
+
 
 
   @HostListener('window:resize', ['$event'])
@@ -93,4 +98,20 @@ export class AppComponent implements OnInit {
     console.log(this.arrayItems);
     
   };
+
+  protected changeLinkHighlight(link: string) {
+    if (link === 'one') {
+      this.linkOne = true;
+      this.linkTwo = false;
+      this.linkThree = false;
+    } else if (link === 'two') {
+      this.linkOne = false;
+      this.linkTwo = true;
+      this.linkThree = false;
+    } else if (link === 'three') {
+      this.linkOne = false;
+      this.linkTwo = false;
+      this.linkThree = true;
+    }
+  }
 }

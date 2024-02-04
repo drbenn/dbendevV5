@@ -8,6 +8,29 @@
         </div>
       </section>
 
+      <div class="w-8 bg-red-200 flex flex-row flex-wrap justify-content-between align-items-start"
+      [ngStyle]="{'padding-top':'20rem'}"
+      >
+        <div class="w-15rem h-25rem bg-green-100">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore necessitatibus eaque animi nesciunt earum molestias dignissimos 
+          <span [ngClass]=" linkOne ?  'highlight-active' : 'highlight-inactive' " class="cursor-pointer" (click)="changeLinkHighlight('one')">minima</span>
+          , ullam 
+          <span [ngClass]=" linkTwo ?  'highlight-active' : 'highlight-inactive' " class="cursor-pointer" (click)="changeLinkHighlight('two')">veniam</span> 
+          aut 
+          <span [ngClass]=" linkThree ?  'highlight-active' : 'highlight-inactive' " class="cursor-pointer" (click)="changeLinkHighlight('three')">architecto</span> 
+          ipsum totam rerum enim consequatur quisquam, hic tenetur. Odio aperiam suscipit mollitia ex hic doloribus voluptates molestiae excepturi id atque placeat, deleniti blanditiis ipsam ad! Eum nisi at nulla!
+        </div>
+        <div *ngIf="linkOne" class="w-15rem h-25rem salmon">
+          LINK ONE
+        </div>
+        <div *ngIf="linkTwo" class="w-15rem h-25rem seagreen">
+          LINK ONE
+        </div>
+        <div *ngIf="linkThree" class="w-15rem h-25rem cornflower">
+          LINK ONE
+        </div>
+    </div>
+
       <div class="w-full flex flex-row flex-wrap justify-content-center align-items-start"
       [ngStyle]="{'padding-top':'60rem'}"
       >
