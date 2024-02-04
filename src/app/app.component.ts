@@ -14,7 +14,10 @@ export class AppComponent implements OnInit {
   protected heroImgIsIntersecting!: boolean;
   protected heroWidth: string = '100%';
   protected heroRadius: string = '0px';
-  protected heroGrayscale: string = 'grayscale(100%)';
+  protected heroGrayscale: string = 'grayscale(0%)';
+
+  // array items scroll
+  protected arrayItems: any = {};
 
 
 
@@ -46,7 +49,7 @@ export class AppComponent implements OnInit {
     };
 
     // HERO RADIUS
-    const heroRadiusIntensity: number = 0.35;
+    const heroRadiusIntensity: number = 1;
     if (this.heroImgIsIntersecting && this.scrollingDirection === 'down' && parseInt(this.heroRadius.slice(0,-2)) <= 40 ) {
       // get rounder
       this.heroRadius = (parseFloat(this.heroRadius.slice(0,-2)) + heroRadiusIntensity).toString() + 'px';
@@ -56,16 +59,16 @@ export class AppComponent implements OnInit {
     };
 
     // GRAYSCALE
-    const grayscaleIntensity: number = 2;
-    let grayValueInterim: string = this.heroGrayscale.replace('grayscale(', '');
-    let grayValue: string = grayValueInterim.slice(0, -2);
-    if (this.heroImgIsIntersecting && this.scrollingDirection === 'down' && parseInt(grayValue) >= 0 ) {
-      // get more color
-      this.heroGrayscale = 'grayscale(' + (parseFloat(grayValue) - grayscaleIntensity).toString() + '%)';
-    } else if (this.heroImgIsIntersecting && this.scrollingDirection === 'up' && parseInt(grayValue) <= 100 ) {
-      // get grayer
-      this.heroGrayscale = 'grayscale(' + (parseFloat(grayValue) + grayscaleIntensity).toString() + '%)';
-    };
+    // const grayscaleIntensity: number = 2;
+    // let grayValueInterim: string = this.heroGrayscale.replace('grayscale(', '');
+    // let grayValue: string = grayValueInterim.slice(0, -2);
+    // if (this.heroImgIsIntersecting && this.scrollingDirection === 'down' && parseInt(grayValue) >= 0 ) {
+    //   // get more color
+    //   this.heroGrayscale = 'grayscale(' + (parseFloat(grayValue) - grayscaleIntensity).toString() + '%)';
+    // } else if (this.heroImgIsIntersecting && this.scrollingDirection === 'up' && parseInt(grayValue) <= 100 ) {
+    //   // get grayer
+    //   this.heroGrayscale = 'grayscale(' + (parseFloat(grayValue) + grayscaleIntensity).toString() + '%)';
+    // };
 
     // keep record of previous position to determine current direction
     this.previousYPosition = this.yScrollPosition;
@@ -80,8 +83,14 @@ export class AppComponent implements OnInit {
       };
   };
 
-  isIntersecting (status: boolean, trigger?: string, ) {
+  isIntersecting (status: boolean, trigger?: string, arrayItem?: string ) {
+    console.log('is intersecting: ', status, trigger, arrayItem);
+    if ( trigger === 'array-item' && status && arrayItem) {
+      const key = arrayItem?.toString()
+      this.arrayItems[key] = true
+    }
     trigger === 'hero-img' && status === true ? this.heroImgIsIntersecting = true : this.heroImgIsIntersecting = false;
-
+    console.log(this.arrayItems);
+    
   };
 }

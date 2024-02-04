@@ -8,6 +8,23 @@
         </div>
       </section>
 
+      <div class="w-full flex flex-row flex-wrap justify-content-center align-items-start"
+      [ngStyle]="{'padding-top':'60rem'}"
+      >
+        <ng-container *ngFor="let item of ['ad', 'bd', 'cd', 'dd', 'de', 'df']; let index">
+          <div class="text-center w-15rem border-radius-3 h-15rem bg m-5"
+            appObserveElement
+            #intersection="intersection"
+            (isIntersecting)="isIntersecting($event, 'array-item', item)"
+            [isContinuous]="true" 
+            [ngClass]="arrayItems[item] ? 'up-in' : 'opacity-0' "
+          >
+            {{ index }}
+          </div>
+
+        </ng-container>
+    </div>
+
       <div class="text-center"
       [ngStyle]="{'padding-top':'50rem'}"
       >
