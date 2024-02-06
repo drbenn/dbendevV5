@@ -226,16 +226,16 @@ export class SkillsComponent implements OnInit {
   // }
 
   isIntersecting (status: boolean, trigger?: string, index?: number, item?: any) {
-    console.log('Element #' + index + ' is intersecting ' + status + ' : ITEM: ' + item)
-    console.log('section in view: ', this.sectionInView);
-    console.log(event);
-    console.log(trigger);
+    // console.log('Element #' + index + ' is intersecting ' + status + ' : ITEM: ' + item)
+    // console.log('section in view: ', this.sectionInView);
+    // console.log(event);
+    // console.log(trigger);
     
     if (status === true && trigger === 'skills' && index === 0 ) {
 
       this.sectionInView =  true;
     }
-    console.log('section in view: ', this.sectionInView);
+    // console.log('section in view: ', this.sectionInView);
   };
 
   setItemAnimationStyle() {

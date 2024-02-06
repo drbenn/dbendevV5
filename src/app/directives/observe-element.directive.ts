@@ -46,7 +46,8 @@ export class ObserveElementDirective implements OnInit, OnDestroy {
       const intersectionObserver = new IntersectionObserver(entries => {
         const { isIntersecting } = entries[0]
         subscriber.next(isIntersecting)
-
+        // console.log(isIntersecting);
+        
         isIntersecting &&
           !this.isContinuous &&
           intersectionObserver.disconnect()

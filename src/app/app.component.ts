@@ -6,7 +6,7 @@ import { Component, HostListener, OnChanges, OnInit, SimpleChanges } from '@angu
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  protected mobileViewWidth: number = 700;
+  protected mobileViewWidth: number = 850;
   protected isMobileView!: boolean;
   protected yScrollPosition: number = 0;
 
@@ -58,7 +58,7 @@ export class AppComponent implements OnInit {
     if (this.heroImgIsIntersecting && this.scrollingDirection === 'down' && parseInt(this.heroRadius.slice(0,-2)) <= 40 ) {
       // get rounder
       this.heroRadius = (parseFloat(this.heroRadius.slice(0,-2)) + heroRadiusIntensity).toString() + 'px';
-    } else if (this.heroImgIsIntersecting && this.scrollingDirection === 'up' && parseInt(this.heroRadius.slice(0,-2)) <= 0 ) {
+    } else if (this.heroImgIsIntersecting && this.scrollingDirection === 'up' && parseInt(this.heroRadius.slice(0,-2)) >= 0 ) {
       // get squarer
       this.heroRadius = (parseFloat(this.heroRadius.slice(0,-2)) - heroRadiusIntensity).toString() + 'px';
     };
@@ -111,7 +111,7 @@ export class AppComponent implements OnInit {
     } else if (link === 'three') {
       this.linkOne = false;
       this.linkTwo = false;
-      this.linkThree = true;
+      this.linkThree = false;
     }
   }
 }
