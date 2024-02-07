@@ -1,0 +1,42 @@
+<div class="mx-4 flex flex-wrap flex-column justify-content-start align-items-start"
+[ngStyle]="{'height': '100vh'}"
+
+>
+
+    <div class="relative text-8xl flex flex-wrap flex-column justify-content-start align-items-start bg-transparent"
+    [ngStyle]="isMobileView ? 
+    {'margin-top':'2rem', 'padding': '2rem 3rem', 'border-radius': '1rem' } : 
+    {'margin-top':'14rem', 'padding': '2rem 8rem 6rem 8rem', 'border-radius': '6rem' }"
+    >
+    <div class="absolute bottom-right-gradient"
+    [ngStyle]="isMobileView ? 
+    {'border-radius': '1rem' } : 
+    {'border-radius': '6rem' }"
+    
+    ></div>
+    <div class="absolute "
+    [ngClass]="isMobileView ? '' : 'top-left-border' "
+    >
+
+    </div>
+    <div class="font-light">Hello,</div>
+    <div class="font-light">I am <span class="font-bold name-gradient">Dan Bennett</span></div>
+    <div class="w-full flex flex-nowrap flex-row justify-content-end align-items-start"
+        [ngClass]="isMobileView ? 'text-5xl' : 'text-7xl' "
+    >
+        <div>a : </div>
+        <div class="font-bold ml-5 flex flex-nowrap flex-column justify-content-around align-items-start">
+        <div class="text-clip intro-line-1">Full Stack</div>
+        <!-- <div>Tenacious []</div> -->
+        <div class="text-clip intro-line-2">Self-taught</div>
+        <div class="text-clip intro-line-3">Web Developer</div>
+        <div class="font-light mr-4 mt-2 text-100 intro-line-4"
+            [ngStyle]="{'max-width': '18rem', 'font-size': '0.75rem'}"  
+        >
+            * With way too much college to go back and pay for more when knowledge is freely available
+        </div>
+        </div>
+    </div>
+    </div>
+
+</div>

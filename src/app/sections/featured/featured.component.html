@@ -1,0 +1,33 @@
+<div class="w-full flex flex-wrap flex-column justify-content-start align-items-end"
+[ngStyle]="{'height': '150vh'}"
+>
+    <div class="w-full relative flex flex-wrap flex-column justify-content-center align-items-center">
+        <div class="font-bold"
+        [ngStyle]="{'padding': '10rem 0rem' }"
+        [ngClass]="titleClass(isTitleViewed, isMobileView)"
+        appObserveElement
+        #intersection="intersection"
+        (isIntersecting)="isIntersecting($event, 'feature-title')"
+        [isContinuous]="true" 
+        >
+            Featured Project(s)
+        </div>
+        <!-- <img src="../../assets/img/misc/jr-korpa-9XngoIpxcEo-unsplash.jpg" alt=""
+        [ngStyle]="{'width': heroWidth, 'border-radius': heroRadius, 'filter': heroGrayscale }"
+
+        appObserveElement
+        #intersection="intersection"
+        (isIntersecting)="isIntersecting($event, 'hero-img')"
+        [isContinuous]="true" 
+        > -->
+        <img src="../../assets/img/projects/featured/cashamole-featured.png" alt=""
+        class="feature-border-shadow"
+        [ngStyle]="{'width': heroWidth, 'border-radius': heroRadius, 'filter': heroGrayscale }"
+        
+        appObserveElement
+        #intersection="intersection"
+        (isIntersecting)="isIntersecting($event, 'hero-img')"
+        [isContinuous]="true" 
+        >
+    </div>
+</div>

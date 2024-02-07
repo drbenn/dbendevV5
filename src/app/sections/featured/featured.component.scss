@@ -1,0 +1,47 @@
+.bg {
+    background-color: red;
+}
+
+
+.feature-border-shadow {
+    border: 1px solid #00000013;
+    box-shadow: 1px 8px 5px rgba(111, 111, 111, 0.142);
+}
+  
+
+.transparent {
+    opacity: 0;
+}
+
+.opaque {
+    opacity: 1;
+}
+
+.text-in {
+    // background: url('../../../assets/img/misc/jr-korpa-9XngoIpxcEo-unsplash.jpg');
+    background: url('../../../assets/img/bg/SL-072622-51930-26.jpg');
+    background-size: cover;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    // text-shadow: 1px 1px 1px rgb(77, 77, 77);
+    -webkit-text-stroke-width: 0.2px;
+    -webkit-text-stroke-color: black;
+    animation: text-in 1200ms ease;
+}
+
+
+
+  @keyframes text-in {
+    0% { 
+        opacity: 0;
+        transform: translateY(20rem) scale(0.8);
+    }
+    70% { 
+        opacity: 0.5;
+    }
+
+    100% { 
+        opacity: 1;
+        transform: translateY(0rem) scale(1);
+    }
+  }

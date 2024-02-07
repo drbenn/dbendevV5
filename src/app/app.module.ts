@@ -23,6 +23,8 @@ import { DesignDarkOneComponent } from './design-dark-one/design-dark-one.compon
 import { AboutComponent } from './design-dark-one/about/about.component';
 import { ContactComponent } from './design-dark-one/contact/contact.component';
 import { NavigationComponent } from './navigation/navigation.component';
+import { HelloComponent } from './sections/hello/hello.component';
+import { FeaturedComponent } from './sections/featured/featured.component';
 
 
 @NgModule({
@@ -41,7 +43,9 @@ import { NavigationComponent } from './navigation/navigation.component';
     RenderThreeComponent,
     ObserveElementDirective,
     DesignDarkOneComponent,
-    NavigationComponent
+    NavigationComponent,
+    HelloComponent,
+    FeaturedComponent
   ],
   imports: [
     BrowserModule,

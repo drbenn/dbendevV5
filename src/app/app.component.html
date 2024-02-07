@@ -1,36 +1,8 @@
 <navigation [isMobileView]="isMobileView" [yScrollPosition]="yScrollPosition"></navigation>
 <main class="w-full flex flex-column flex-nowrap justify-content-start align-items-center">
 
-
-  <div class="mx-4"
-  [ngStyle]="{'padding-top':'10rem'}"
-  >
-
-  <div class="relative text-8xl flex flex-wrap flex-column justify-content-start align-items-start">
-    <div class="absolute "
-    [ngClass]="isMobileView ? '' : 'top-left-border' "
-    >
-    </div>
-    <div class="font-light">Hello,</div>
-    <div class="font-light">I am <span class="font-bold name-gradient">Dan Bennett</span></div>
-    <div class="w-full flex flex-nowrap flex-row justify-content-end align-items-start"
-      [ngClass]="isMobileView ? 'text-5xl' : 'text-7xl' "
-    >
-      <div>a : </div>
-      <div class="font-bold ml-5 flex flex-nowrap flex-column justify-content-around align-items-start">
-        <div class="text-clip intro-line-1">Full Stack</div>
-        <!-- <div>Tenacious []</div> -->
-        <div class="text-clip intro-line-2">Self-taught</div>
-        <div class="text-clip intro-line-3">Web Developer</div>
-        <div class="font-light mr-4 mt-2 text-100 intro-line-4"
-          [ngStyle]="{'max-width': '18rem', 'font-size': '0.75rem'}"  
-        >
-          * With way too much college to go back and pay for more when knowledge is freely available
-        </div>
-      </div>
-    </div>
-  </div>
-
+<hello [isMobileView]="isMobileView"></hello>
+<featured [isMobileView]="isMobileView" [mobileViewWidth]="mobileViewWidth"></featured>
 
   <!-- <div class="mx-4"
   [ngStyle]="{'padding-top':'10rem'}"
@@ -45,30 +17,9 @@
 
 
 
-  </div>
+
   <!-- <div class=""> -->
 
-    <div class="text-center"
-    [ngStyle]="{'padding-top':'80rem'}"
-    >
-      <img src="../assets/img/misc/jr-korpa-9XngoIpxcEo-unsplash.jpg" alt=""
-      [ngStyle]="{'width': heroWidth, 'border-radius': heroRadius, 'filter': heroGrayscale }"
-    
-      appObserveElement
-      #intersection="intersection"
-      (isIntersecting)="isIntersecting($event, 'hero-img')"
-      [isContinuous]="true" 
-      >
-  
-      <!-- <img src="../assets/img/projects/featured/cashamole-featured.png" alt=""
-      [ngStyle]="{'width': heroWidth, 'border-radius': heroRadius, 'filter': heroGrayscale }"
-    
-      appObserveElement
-      #intersection="intersection"
-      (isIntersecting)="isIntersecting($event, 'hero-img')"
-      [isContinuous]="true" 
-      > -->
-    </div>
 
 
 
