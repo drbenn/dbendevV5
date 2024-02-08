@@ -21,13 +21,13 @@
         [isContinuous]="true" 
         > -->
         <img src="../../assets/img/projects/featured/cashamole-featured.png" alt=""
-        class="feature-border-shadow"
-        [ngStyle]="{'width': heroWidth, 'border-radius': heroRadius, 'filter': heroGrayscale }"
-        
-        appObserveElement
-        #intersection="intersection"
-        (isIntersecting)="isIntersecting($event, 'hero-img')"
-        [isContinuous]="true" 
+            class="feature-border-shadow p-4"
+            [ngStyle]="{'width': heroWidth, 'border-radius': heroRadius, 'filter': heroGrayscale }"
+            
+            appObserveElement
+            #intersection="intersection"
+            (isIntersecting)="isIntersecting($event, 'hero-img')"
+            [isContinuous]="true" 
         >
     </div>
 </div>

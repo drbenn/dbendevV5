@@ -1,0 +1,119 @@
+<div class="w-full flex flex-wrap flex-column justify-content-start align-items-center"
+[ngStyle]="{'min-height': '150vh', 'padding': '10rem 0rem'}"
+>
+
+    <div class="font-bold"
+        [ngStyle]="{'padding': '10rem 0rem 5rem 0rem' }"
+        [ngClass]="titleClass(isTitleViewed, isMobileView)"
+        appObserveElement
+        #intersection="intersection"
+        (isIntersecting)="isIntersecting($event, 'past-project-title')"
+        [isContinuous]="true" 
+    >
+        Past Project(s)
+    </div>
+    <div class="w-10 flex flex-row flex-wrap justify-content-center align-items-start"
+    [ngStyle]="{'padding-top':'0rem', 'max-width': '140rem'}"
+    >
+    <!-- <ng-container *ngFor="let item of ['ad', 'bd', 'cd', 'dd', 'de', 'df']; let index">
+        <div class="relative">
+
+            <div class="relative text-center w-15rem border-radius-3 h-15rem bg m-5"
+            appObserveElement
+            #intersection="intersection"
+            (isIntersecting)="isIntersecting($event, 'array-item', item)"
+            [isContinuous]="true" 
+            [ngClass]="arrayItems[item] ? 'up-in' : 'opacity-0' "
+            >
+            <div class="relative past-project-card-cover"></div>
+            {{ index }}
+            </div>
+
+        </div>
+
+    </ng-container> -->
+
+        <ng-container *ngFor="let project of projects; let index">
+            <div *ngIf="!project.archived"
+                class="relative h-12rem bg mx-5 my-3"
+                [ngStyle]="{'min-width': '24rem', 'width': '40vw', 'max-width': '30rem'}"
+            >
+
+
+
+                <div class="relative text-center border-radius-3 h-12rem card-image"
+                    [ngStyle]="{'min-width': '24rem', 'width': '40vw', 'max-width': '30rem', 'background-position': project.imgBackgroundPosition }"
+                    [ngClass]="arrayItems[project.title] ? 'up-in' : 'opacity-0' "
+                    [style.backgroundImage]="'url(' + project.img + ')'"
+                    appObserveElement
+                    #intersection="intersection"
+                    (isIntersecting)="isIntersecting($event, 'array-item', project.title)"
+                    [isContinuous]="true" 
+                >
+                    <div class="relative past-project-card-cover cursor-pointer" (click)="showModalDialog(project)">
+                        <div class="relative w-full h-full flex flex-row flex-nowrap justify-content-between align-items-end">
+                            <div class="absolute project-icon-position icon-from-above">
+                                <i class="pi pi-external-link" style="font-size: 2.5rem"></i>
+                            </div>
+                            <div class="mb-2 ml-3 text-white font-semibold text-2xl text-from-left">
+                                {{ project.title }}
+                            </div>
+                            <div class="mb-2 mr-3 text-white font-light text-sm text-from-right">
+                                {{ project.timeLine}}
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+
+        </ng-container>
+    </div>
+    Do you want to see the super old projects?
+</div>
+
+<p-dialog [(visible)]="displayModal" [modal]="true" [style]="{width: '40vw', minWidth: '28rem', height: 'fit-content'}"
+[draggable]="false" [resizable]="false">
+    <section class="w-full flex flex-wrap flex-column justify-content-start align-items-start px-2">
+        <div class="font-bold text-2xl mb-3 text-touch">
+            {{ modalTitle}}
+        </div>
+
+        <div 
+            class="w-full h-16rem modal-image"
+            [ngStyle]="{'background-position': modalImgBackgroundPosition }"
+            [style.backgroundImage]="'url(' + modalImgSrc + ')'"
+        >
+        </div>
+        <div class="w-11 flex flex-wrap flex-column justify-content-start align-items-start">
+            <div class="mt-4 mb-1 font-base text-base text-touch">
+                {{ modalOneLine}}
+            </div>
+            <div class="mb-3 font-light text-base text-touch">
+                {{ modalDetail }}
+            </div>
+            <div *ngIf="modalGitLink && modalGitLink.length" class="mb-2 font-light text-base">
+                <a [href]="modalGitLink[0]" target="_blank">Link to GitHub repository</a>
+            </div>
+            <div *ngIf="modalDemoLink && modalDemoLink.length" class="mb-2 font-light text-base">
+                <a [href]="modalDemoLink" target="_blank">Link to demo</a>
+            </div>
+            <div class="flex flex-nowrap flex-row justify-content-start align-items-start">
+                <ng-container *ngFor="let tech of modalTechImg; let i = index">
+                    <div class="ml-2 my-2">
+                        <img 
+                            [src]="tech" alt="" 
+                            [ngStyle]="{'width': '2.5rem', 'height': '2.5rem'}"
+                            [pTooltip]="modalTechName[i]"
+                            tooltipPosition="top"
+                            class="icon-touch mr-4"
+                        />
+                    </div>
+                </ng-container>
+            </div>
+        </div>
+
+    </section>
+
+</p-dialog>
+
+

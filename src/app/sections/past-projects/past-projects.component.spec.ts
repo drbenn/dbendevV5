@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FeaturedComponent } from './featured.component';
+import { PastProjectsComponent } from './past-projects.component';
 
-describe('FeaturedComponent', () => {
-  let component: FeaturedComponent;
-  let fixture: ComponentFixture<FeaturedComponent>;
+describe('PastProjectsComponent', () => {
+  let component: PastProjectsComponent;
+  let fixture: ComponentFixture<PastProjectsComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FeaturedComponent ]
+      declarations: [ PastProjectsComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(FeaturedComponent);
+    fixture = TestBed.createComponent(PastProjectsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

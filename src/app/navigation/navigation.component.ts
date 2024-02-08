@@ -19,11 +19,11 @@ export class NavigationComponent implements OnInit, OnChanges {
   constructor(private viewportScroller: ViewportScroller) { }
 
   ngOnInit(): void {
-    // if (this.yScrollPosition > 32) {
-    //   this.isNavSticky = true;
-    // } else {
-    //   this.isNavSticky = false;
-    // };
+    if (this.yScrollPosition > 32) {
+      this.isNavSticky = true;
+    } else {
+      this.isNavSticky = false;
+    };
   };
 
   ngOnChanges(changes: any) {
@@ -36,8 +36,6 @@ export class NavigationComponent implements OnInit, OnChanges {
       };
     }
   };
-
-
 
   protected onClickScroll(elementId: string): void {
     console.log(elementId);

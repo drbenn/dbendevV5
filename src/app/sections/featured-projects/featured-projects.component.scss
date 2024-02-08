@@ -1,14 +1,8 @@
-.bg {
-    background-color: red;
-}
-
-
 .feature-border-shadow {
     border: 1px solid #00000013;
     box-shadow: 1px 8px 5px rgba(111, 111, 111, 0.142);
 }
   
-
 .transparent {
     opacity: 0;
 }
@@ -29,9 +23,7 @@
     animation: text-in 1200ms ease;
 }
 
-
-
-  @keyframes text-in {
+@keyframes text-in {
     0% { 
         opacity: 0;
         transform: translateY(20rem) scale(0.8);
@@ -44,4 +36,4 @@
         opacity: 1;
         transform: translateY(0rem) scale(1);
     }
-  }
+}

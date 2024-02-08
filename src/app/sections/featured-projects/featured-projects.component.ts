@@ -1,11 +1,11 @@
 import { Component, HostListener, Input, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'featured',
-  templateUrl: './featured.component.html',
-  styleUrls: ['./featured.component.scss']
+  selector: 'featured-projects',
+  templateUrl: './featured-projects.component.html',
+  styleUrls: ['./featured-projects.component.scss']
 })
-export class FeaturedComponent implements OnInit {
+export class FeaturedProjectsComponent implements OnInit {
   @Input() isMobileView!: boolean;
   @Input() mobileViewWidth!: number;
   protected yScrollPosition: number = 0;
@@ -35,7 +35,7 @@ export class FeaturedComponent implements OnInit {
   };
 
   isIntersecting (status: boolean, trigger?: string, arrayItem?: string ) {
-    console.log('is intersecting: ', status, trigger, arrayItem);
+    // console.log('is intersecting: ', status, trigger, arrayItem);
     // if ( trigger === 'array-item' && status && arrayItem) {
     //   const key = arrayItem?.toString()
     //   this.arrayItems[key] = true
@@ -109,9 +109,10 @@ export class FeaturedComponent implements OnInit {
 
   protected titleClass(isTitleViewed: boolean, isMobileView: boolean ): string {
     let returnString: string = '';
-    isMobileView ? returnString += 'text-5xl ' : returnString += 'text-8xl ';
+    isMobileView ? returnString += 'text-6xl ' : returnString += 'text-8xl ';
     isTitleViewed ? returnString += 'text-in opaque' : returnString += 'transparent';
     return returnString;
   };
+
 
 }

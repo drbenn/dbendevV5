@@ -1,3 +1,5 @@
+@use '../../../styles/variables' as vars;
+
 .top-left-border {
     // background-color: red;
     height: 7.75rem;
@@ -36,27 +38,29 @@
   }
 
   .intro-line-1 {
-    background-color: rgba(235, 27, 138, 0.362);
-    background-color: rgb(255, 255, 156);
-    background-color: rgba(145, 235, 27, 0.362);
-    background-color: rgba(235, 93, 27, 0.362);
+    // background-color: rgba(235, 27, 138, 0.362);
+    // background-color: rgb(255, 255, 156);
+    // background-color: rgba(145, 235, 27, 0.362);
+    // background-color: rgba(235, 93, 27, 0.362);
 
-    background: #fffdc3;
+    background: vars.$theme-color-1;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: intro-line-1-anim 9s linear;
   }
 
   .intro-line-2 {
-    background-color: #eba61b5c;
+    background: vars.$theme-color-2;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: intro-line-2-anim 9s linear;
   }
 
   .intro-line-3 {
-    background-color: rgba(235, 27, 138, 0.362);
-    background-color: #eb5d1b5c;
+    // background-color: rgba(235, 27, 138, 0.362);
+    background: vars.$theme-color-3;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     animation: intro-line-3-anim 9s linear;
   }
 
@@ -70,19 +74,22 @@
       background: transparent;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-        opacity: 0;
+      opacity: 0;
+      transform: translate(5rem, 0rem);
     }
     11% { 
       opacity: 0;
     }
     12% { 
       opacity: 1;
+      transform: translate(5rem, 0rem);
     }
     21% { 
       background: transparent;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       opacity: 1;
+      transform: translate(0rem, 0rem);
     }
     22% { 
       background: rgba(255, 253, 195, 0);
@@ -111,6 +118,7 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       opacity: 1;
+      transform: translate(0rem, 0rem);
     }
   }
 
@@ -120,19 +128,22 @@
       background: transparent;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-        opacity: 0;
+      opacity: 0;
+      transform: translate(5rem, 0rem);
     }
     32% { 
       opacity: 0;
     }
     33% { 
       opacity: 1;
+      transform: translate(5rem, 0rem);
     }
     42% { 
       background: transparent;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       opacity: 1;
+      transform: translate(0rem, 0rem);
     }
     43% { 
       background:#eba61b1b;
@@ -161,6 +172,7 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       opacity: 1;
+      transform: translate(0rem, 0rem);
     }
   }
 
@@ -169,19 +181,22 @@
       background: transparent;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-        opacity: 0;
+      opacity: 0;
+      transform: translate(5rem, 0rem);
     }
     54% { 
       opacity: 0;
     }
     55% { 
       opacity: 1;
+      transform: translate(5rem, 0rem);
     }
     64% { 
       background: transparent;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       opacity: 1;
+      transform: translate(0rem, 0rem);
     }
     65% { 
       background: rgba(255, 253, 195, 0);
@@ -210,6 +225,7 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       opacity: 1;
+      transform: translate(0rem, 0rem);
     }
   }
 

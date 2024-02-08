@@ -5,10 +5,12 @@
     "oneLine": "The original design of personal website.",
     "detail":"The original design of my site. A simple landing page with links to my projects.",
     "img": "../../assets/img/projects/history/dbendev1.png",
+    "imgBackgroundPosition": "center center",
     "timeLine": "Sept 2021",
     "tech": ["CSS", "HTML"],
     "gitLink": ["https:/github.com/drbenn/dbendevV1"],
     "demoLink": "https:/drbenn.github.io/dbendevV1/",
+    "archived": true,
     "date": "9/15/2021"
   },
   {
@@ -17,10 +19,12 @@
     "oneLine": "Stylized landing page with animations to improve CSS skills.",
     "detail":"Stylized landing page with animations to improve CSS skills.",
     "img": "../../assets/img/projects/history/landing-page.jpg",
+    "imgBackgroundPosition": "center top",
     "timeLine": "Sept 2021",
     "tech": ["CSS", "HTML"],
     "gitLink": ["https:/github.com/drbenn/coming-soon-landing"],
     "demoLink": "https:/drbenn.github.io/coming-soon-landing/",
+    "archived": true,
     "date": "9/25/2021"
   },
   {
@@ -29,10 +33,12 @@
     "oneLine": "Basic photo and text portfolio website to practice CSS and responsive design.",
     "detail":"Basic photo and text portfolio website to practice CSS and responsive design.",
     "img": "../../assets/img/projects/history/simple-mobile-portfolio.jpg",
+    "imgBackgroundPosition": "center top",
     "timeLine": "Oct 2021",
     "tech": ["CSS", "HTML"],
     "gitLink": ["https:/github.com/drbenn/simple-mobile-portfolio"],
     "demoLink": "https:/drbenn.github.io/simple-mobile-portfolio/",
+    "archived": true,
     "date": "10/15/2021"
   },
   {
@@ -41,10 +47,12 @@
     "oneLine": "CSS and HTML store front UI project.",
     "detail":"More CSS and HTML with a incrementally larger store front UI project.",
     "img": "../../assets/img/projects/history/dog-duds-store-front.jpg",
+    "imgBackgroundPosition": "center top",
     "timeLine": "Nov 2021",
     "tech": ["CSS", "HTML"],
     "gitLink": ["https:/github.com/drbenn/dog-duds-store"],
     "demoLink": "https:/drbenn.github.io/dog-duds-store/",
+    "archived": true,
     "date": "11/1/2021"
   },
   {
@@ -53,10 +61,12 @@
     "oneLine": "First project implementing Javascript logic and DOM manipulation.",
     "detail":"My first project implementing Javascript logic and DOM manipulation.",
     "img": "../../assets/img/projects/history/retro-blackjack.jpg",
+    "imgBackgroundPosition": "center top",
     "timeLine": "Nov 2021",
     "tech": ["JavaScript", "CSS", "HTML"],
     "gitLink": ["https:/github.com/drbenn/retro-blackjack"],
     "demoLink": "https:/drbenn.github.io/retro-blackjack/",
+    "archived": true,
     "date": "11/15/2021"
   },
   {
@@ -65,10 +75,12 @@
     "oneLine": "Async API data calls using Vanilla Javascript.",
     "detail":"",
     "img": "../../assets/img/projects/history/meme-gen.jpg",
+    "imgBackgroundPosition": "center top",
     "timeLine": "Dec 2021",
     "tech": ["JavaScript", "CSS", "HTML"],
     "gitLink": ["https:/github.com/drbenn/meme-generator"],
     "demoLink": "https:/drbenn.github.io/meme-generator/",
+    "archived": true,
     "date": "12/1/2021"
   },
   {
@@ -77,10 +89,12 @@
     "oneLine": "Redesign of personal website.",
     "detail":"Personal website expanded and redesigned to include project cards and contact form.",
     "img": "../../assets/img/projects/history/dbendev2.png",
+    "imgBackgroundPosition": "center top",
     "timeLine": "Dec 2021",
     "tech": ["JavaScript", "CSS", "HTML"],
     "gitLink": ["https:/github.com/drbenn/dbendevV2"],
     "demoLink": "https:/drbenn.github.io/dbendevV2/",
+    "archived": true,
     "date": "12/10/2021"
   },
   {
@@ -89,10 +103,12 @@
     "oneLine": "Javascript application focusing on aysnc API calls and DOM manipulation.",
     "detail":"A bare bones venture into app development where I combined DOM manipulation, Async and JSON to display and calculate an average dividend yield for chosen stock investments.",
     "img": "../../assets/img/projects/history/dividend-rate-blender.jpg",
+    "imgBackgroundPosition": "center top",
     "timeLine": "Dec 2021",
     "tech": ["JavaScript", "CSS", "HTML"],
     "gitLink": ["https:/github.com/drbenn/dividend-rate-blender"],
     "demoLink": "https:/drbenn.github.io/dividend-rate-blender/",
+    "archived": true,
     "date": "12/20/2021"
   },
   {
@@ -101,10 +117,12 @@
     "oneLine": "First full-stack project personal finance tracker.(Note* AWS database hosting no longer available).",
     "detail":"Personal Finance Tracker and first full-stack project. I've been keeping track of my finances for years on a spreadsheet. This was my attempt at a more accessible web based version. Note-my sample data from the test login only extends to March 2022, but the app will load on the current month, so to view test data you need to switch the date on login.",
     "img": "../../assets/img/projects/history/worthie-fin-tracker.png",
+    "imgBackgroundPosition": "center center",
     "timeLine": "Jan 2022",
     "tech": ["JavaScript","NodeJS","MySQL","AWS","Bootstrap"],
     "gitLink": ["https:/github.com/drbenn/worthie-fin-track"],
     "demoLink": "https:/danbennett.dev/worthie/",
+    "archived": true,
     "date": "1/15/2022"
   },
   {
@@ -113,10 +131,12 @@
     "oneLine": "Fun Vanilla JavaScript project with childhood pointillism design.",
     "detail":"A fun, creative project. I saw the cool stickers and wanted to use them for a project but didn't know for what. Eventually remembered Lite-Brite was a thing, so the idea came to recreate a scene reminiscent of childhood. ",
     "img": "../../assets/img/projects/history/lite-brite.jpg",
+    "imgBackgroundPosition": "center top",
     "timeLine": "Jun 2022",
     "tech": ["JavaScript"],
     "gitLink": ["https:/github.com/drbenn/lite-brite"],
     "demoLink": "https:/drbenn.github.io/lite-brite/",
+    "archived": false,
     "date": "7/15/2022"
   },
   {
@@ -125,10 +145,12 @@
     "oneLine": "Redesign of personal website.",
     "detail":"Personal website with crisper cards, animations and dark mode.",
     "img": "../../assets/img/projects/history/dbendev3.png",
+    "imgBackgroundPosition": "center top",
     "timeLine": "Aug 2022",
     "tech": ["JavaScript"],
     "gitLink": ["https:/github.com/drbenn/dbendevV3"],
     "demoLink": "https:/drbenn.github.io/dbendevV3/",
+    "archived": true,
     "date": "8/10/2022"
   },
   {
@@ -137,10 +159,12 @@
     "oneLine": "Full-stack workout tracking application.",
     "detail":"More Than Last Time(MTLT) Fitness Tracker. My first full-stack Angular project that included NGXS state management, NestJS and Mongoose. Note - test data available on login limited to roughly exersizes, use Barbell/ Squat(Back) or Dumbbell/Bench Press as recognized 'last time exercises",
     "img": "../../assets/img/projects/history/mtlt.png",
+    "imgBackgroundPosition": "center top",
     "timeLine": "Aug 2022",
     "tech": ["Angular","NGXS","NestJS", "MongoDB"],
     "gitLink": ["https:/github.com/drbenn/mtlt"],
     "demoLink": "https:/danbennett.dev/mtlt/",
+    "archived": false,
     "date": "8/25/2022"
   },
   {
@@ -149,10 +173,12 @@
     "oneLine": "First major React project recreating the lengendary board game.",
     "detail":"I wanted to build my first project in React and I remembered it came to me that I hadn't played \"Guess Who\" in years...ahhh nostalgia will make you do extraordary things... ",
     "img": "../../assets/img/projects/history/guess-who.jpg",
+    "imgBackgroundPosition": "center top",
     "timeLine": "Nov 2022",
     "tech": ["React"],
     "gitLink": ["https:/github.com/drbenn/guess-who-react"],
     "demoLink": "https:/drbenn.github.io/guess-who-react/",
+    "archived": false,
     "date": "11/28/2022"
   },
   {
@@ -162,9 +188,11 @@
     "timeLine": "Dec 2022",
     "detail":"After completing a couple fun and retro projects I wanted to display a darker, cleaner project, showcasing my improvement in overall design, organization and skills with leaflet and scrollspy",
     "img":"../../assets/img/projects/history/charging-stations.jpg",
+    "imgBackgroundPosition": "center center",
     "tech": ["Angular","NGXS","Leaflet"],
     "gitLink": ["https:/github.com/drbenn/charging-stations"],
     "demoLink": "https:/danbennett.dev/charging-stations",
+    "archived": false,
     "date": "12/10/2022"
   },
   {
@@ -174,9 +202,11 @@
     "timeLine": "Dec 2022",
     "detail":"Redesigned personal website to practice React",
     "img":"../../assets/img/projects/history/dbendevv4.png",
+    "imgBackgroundPosition": "center center",
     "tech": ["React"],
     "gitLink": ["https:/github.com/drbenn/dbendevV4-react"],
-    "demoLink": "https:/danbennett.dev",
+    "demoLink": "",
+    "archived": false,
     "date": "12/15/2022"
   },
   {
@@ -186,9 +216,11 @@
     "timeLine": "Apr 2023",
     "detail":"",
     "img":"../../assets/img/projects/history/turbo.jpg",
+    "imgBackgroundPosition": "center top",
     "tech": ["Angular", "Web Audio API", "NGXS"],
     "gitLink": ["https:/github.com/drbenn/turbo-beat-5000"],
     "demoLink": "https:/danbennett.dev/turbo",
+    "archived": false,
     "date": "04/05/2023"
   },
   {
@@ -198,6 +230,7 @@
     "timeLine": "Aug 2023",
     "detail":"Redesigned personal website to practice React",
     "img":"../../assets/img/projects/history/dbendevv5.jpg",
+    "imgBackgroundPosition": "center bottom",
     "tech": ["React"],
     "gitLink": ["https:/github.com/drbenn/dbendevV5-react"],
     "demoLink": "",
@@ -210,9 +243,11 @@
     "timeLine": "Aug 2023",
     "detail":"Fullstack dividend return projection",
     "img":"../../assets/img/projects/history/grizzly.png",
+    "imgBackgroundPosition": "center center",
     "tech": ["React", "Redux", "Python", "MySQL", "NodeJS"],
     "gitLink": ["https:/github.com/drbenn/grizzly-dividends", "https:/github.com/drbenn/grizzly-node-api", "https:/github.com/drbenn/dividend-servers"],
     "demoLink": "https:/danbennett.dev/grizzly",
+    "archived": false,
     "date": "08/06/2023"
   }
 

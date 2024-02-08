@@ -24,8 +24,10 @@ import { AboutComponent } from './design-dark-one/about/about.component';
 import { ContactComponent } from './design-dark-one/contact/contact.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { HelloComponent } from './sections/hello/hello.component';
-import { FeaturedComponent } from './sections/featured/featured.component';
-
+import { FeaturedProjectsComponent } from './sections/featured-projects/featured-projects.component';
+import { PastProjectsComponent } from './sections/past-projects/past-projects.component';
+import { MyStoryComponent } from './sections/my-story/my-story.component';
+import {TooltipModule} from 'primeng/tooltip';
 
 @NgModule({
   declarations: [
@@ -45,7 +47,9 @@ import { FeaturedComponent } from './sections/featured/featured.component';
     DesignDarkOneComponent,
     NavigationComponent,
     HelloComponent,
-    FeaturedComponent
+    FeaturedProjectsComponent,
+    PastProjectsComponent,
+    MyStoryComponent
   ],
   imports: [
     BrowserModule,
@@ -54,7 +58,8 @@ import { FeaturedComponent } from './sections/featured/featured.component';
     ButtonModule, 
     BrowserAnimationsModule,
     CardModule,
-    SidebarModule
+    SidebarModule,
+    TooltipModule
   ],
   providers: [],
   bootstrap: [AppComponent]

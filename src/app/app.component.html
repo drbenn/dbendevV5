@@ -2,8 +2,12 @@
 <main class="w-full flex flex-column flex-nowrap justify-content-start align-items-center">
 
 <hello [isMobileView]="isMobileView"></hello>
-<featured [isMobileView]="isMobileView" [mobileViewWidth]="mobileViewWidth"></featured>
-
+<past-projects [isMobileView]="isMobileView" [mobileViewWidth]="mobileViewWidth"></past-projects>
+<featured-projects [isMobileView]="isMobileView" [mobileViewWidth]="mobileViewWidth"></featured-projects>
+<app-projects 
+class="w-full" 
+id="scroll-to-projects"
+></app-projects>
   <!-- <div class="mx-4"
   [ngStyle]="{'padding-top':'10rem'}"
   >
@@ -23,7 +27,7 @@
 
 
 
-    <div class="w-full splash pt-8 flex flex-column flex-nowrap justify-content-start align-items-center">
+    <!-- <div class="w-full splash pt-8 flex flex-column flex-nowrap justify-content-start align-items-center">
       <section class="w-9 flex flex-column flex-nowrap justify-content-center align-items-end">
         <div>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, alias, ea, voluptates reiciendis dolore iste magnam nemo mollitia quibusdam excepturi eos amet facere sit nisi tempore. Perspiciatis adipisci tempore dolorum molestias nesciunt possimus quidem quas! Provident quas, perspiciatis, a aliquid cupiditate deleniti sapiente animi beatae natus debitis reiciendis qui libero.
@@ -53,30 +57,12 @@
         </div>
     </div>
 
-      <div class="w-full flex flex-row flex-wrap justify-content-center align-items-start"
-      [ngStyle]="{'padding-top':'60rem'}"
-      >
-        <ng-container *ngFor="let item of ['ad', 'bd', 'cd', 'dd', 'de', 'df']; let index">
-          <div class="text-center w-15rem border-radius-3 h-15rem bg m-5"
-            appObserveElement
-            #intersection="intersection"
-            (isIntersecting)="isIntersecting($event, 'array-item', item)"
-            [isContinuous]="true" 
-            [ngClass]="arrayItems[item] ? 'up-in' : 'opacity-0' "
-          >
-            {{ index }}
-          </div>
-
-        </ng-container>
-    </div>
-
-
-  </div>
+  </div> -->
 
 
 
 
-  <app-skills></app-skills>
+  <!-- <app-skills></app-skills> -->
 
 
 
