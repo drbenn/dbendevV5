@@ -85,14 +85,8 @@ export class PastProjectsComponent implements OnInit {
     this.modalTechName = [];
     project.tech.forEach((tech: string) => {
       this.modalTechName.push(tech)
-      console.log(tech)
-      
-
-  }
-  );
+    });
     this.modalImgBackgroundPosition = project.imgBackgroundPosition;
-    console.log(this.modalTechName);
-    
-  }
+  };
 
 }

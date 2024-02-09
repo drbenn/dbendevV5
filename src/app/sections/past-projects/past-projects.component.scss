@@ -25,7 +25,8 @@
 
 .text-in {
     // background: url('../../../assets/img/misc/jr-korpa-9XngoIpxcEo-unsplash.jpg');
-    background: url('../../../assets/img/bg/SL-072622-51930-21.jpg');
+    background: url('../../../assets/img/misc/annie-spratt-yI3weKNBRTc-unsplash.jpg');
+    filter: brightness(70%);
     background-size: cover;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -181,8 +182,8 @@
 }
 
 .modal-image:hover {
-    filter: contrast(1.25);
-    transition: 400ms ease-in;
+    filter: grayscale(50%);
+    transition: 200ms ease-in;
 }
 
 .text-touch:hover {
@@ -204,7 +205,7 @@
 
   .icon-touch:hover {
     transform: scale(1);
-    animation: touched-icon 300ms linear;
+    animation: touched-icon 200ms ease-in;
 }
 
 @keyframes touched-icon {
@@ -212,7 +213,7 @@
         transform: scale(1);
     }
     50% { 
-        transform: scale(1.35);
+        transform: scale(1.15);
     }
     100% { 
         transform: scale(1);

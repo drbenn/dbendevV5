@@ -35,13 +35,13 @@
 
         <ng-container *ngFor="let project of projects; let index">
             <div *ngIf="!project.archived"
-                class="relative h-12rem bg mx-5 my-3"
+                class="relative h-7rem bg mx-5 my-3"
                 [ngStyle]="{'min-width': '24rem', 'width': '40vw', 'max-width': '30rem'}"
             >
 
 
 
-                <div class="relative text-center border-radius-3 h-12rem card-image"
+                <div class="relative text-center border-radius-3 h-7rem card-image"
                     [ngStyle]="{'min-width': '24rem', 'width': '40vw', 'max-width': '30rem', 'background-position': project.imgBackgroundPosition }"
                     [ngClass]="arrayItems[project.title] ? 'up-in' : 'opacity-0' "
                     [style.backgroundImage]="'url(' + project.img + ')'"
@@ -53,7 +53,7 @@
                     <div class="relative past-project-card-cover cursor-pointer" (click)="showModalDialog(project)">
                         <div class="relative w-full h-full flex flex-row flex-nowrap justify-content-between align-items-end">
                             <div class="absolute project-icon-position icon-from-above">
-                                <i class="pi pi-external-link" style="font-size: 2.5rem"></i>
+                                <i class="pi pi-external-link" style="font-size: 1.75rem"></i>
                             </div>
                             <div class="mb-2 ml-3 text-white font-semibold text-2xl text-from-left">
                                 {{ project.title }}
