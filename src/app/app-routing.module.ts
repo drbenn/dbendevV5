@@ -8,9 +8,8 @@ const routes: Routes = [];
     useHash: true,
     scrollPositionRestoration: 'top',
     anchorScrolling: 'enabled',
-    scrollOffset: [0, 2000],
-    relativeLinkResolution: 'legacy'
-  })],
+    scrollOffset: [0, 2000]
+})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
