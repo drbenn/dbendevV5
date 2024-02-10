@@ -10,7 +10,7 @@
     "tech": ["CSS", "HTML"],
     "gitLink": ["https:/github.com/drbenn/dbendevV1"],
     "demoLink": "https:/drbenn.github.io/dbendevV1/",
-    "archived": true,
+    "viewStatus": "archived",
     "date": "9/15/2021"
   },
   {
@@ -24,7 +24,7 @@
     "tech": ["CSS", "HTML"],
     "gitLink": ["https:/github.com/drbenn/coming-soon-landing"],
     "demoLink": "https:/drbenn.github.io/coming-soon-landing/",
-    "archived": true,
+    "viewStatus": "archived",
     "date": "9/25/2021"
   },
   {
@@ -38,7 +38,7 @@
     "tech": ["CSS", "HTML"],
     "gitLink": ["https:/github.com/drbenn/simple-mobile-portfolio"],
     "demoLink": "https:/drbenn.github.io/simple-mobile-portfolio/",
-    "archived": true,
+    "viewStatus": "archived",
     "date": "10/15/2021"
   },
   {
@@ -52,7 +52,7 @@
     "tech": ["CSS", "HTML"],
     "gitLink": ["https:/github.com/drbenn/dog-duds-store"],
     "demoLink": "https:/drbenn.github.io/dog-duds-store/",
-    "archived": true,
+    "viewStatus": "archived",
     "date": "11/1/2021"
   },
   {
@@ -66,7 +66,7 @@
     "tech": ["JavaScript", "CSS", "HTML"],
     "gitLink": ["https:/github.com/drbenn/retro-blackjack"],
     "demoLink": "https:/drbenn.github.io/retro-blackjack/",
-    "archived": true,
+    "viewStatus": "archived",
     "date": "11/15/2021"
   },
   {
@@ -80,7 +80,7 @@
     "tech": ["JavaScript", "CSS", "HTML"],
     "gitLink": ["https:/github.com/drbenn/meme-generator"],
     "demoLink": "https:/drbenn.github.io/meme-generator/",
-    "archived": true,
+    "viewStatus": "archived",
     "date": "12/1/2021"
   },
   {
@@ -94,7 +94,7 @@
     "tech": ["JavaScript", "CSS", "HTML"],
     "gitLink": ["https:/github.com/drbenn/dbendevV2"],
     "demoLink": "https:/drbenn.github.io/dbendevV2/",
-    "archived": true,
+    "viewStatus": "archived",
     "date": "12/10/2021"
   },
   {
@@ -108,7 +108,7 @@
     "tech": ["JavaScript", "CSS", "HTML"],
     "gitLink": ["https:/github.com/drbenn/dividend-rate-blender"],
     "demoLink": "https:/drbenn.github.io/dividend-rate-blender/",
-    "archived": true,
+    "viewStatus": "archived",
     "date": "12/20/2021"
   },
   {
@@ -122,7 +122,7 @@
     "tech": ["JavaScript","NodeJS","MySQL","AWS","Bootstrap"],
     "gitLink": ["https:/github.com/drbenn/worthie-fin-track"],
     "demoLink": "https:/danbennett.dev/worthie/",
-    "archived": true,
+    "viewStatus": "archived",
     "date": "1/15/2022"
   },
   {
@@ -136,7 +136,7 @@
     "tech": ["JavaScript"],
     "gitLink": ["https:/github.com/drbenn/lite-brite"],
     "demoLink": "https:/drbenn.github.io/lite-brite/",
-    "archived": false,
+    "viewStatus": "past",
     "date": "7/15/2022"
   },
   {
@@ -150,7 +150,7 @@
     "tech": ["JavaScript"],
     "gitLink": ["https:/github.com/drbenn/dbendevV3"],
     "demoLink": "https:/drbenn.github.io/dbendevV3/",
-    "archived": true,
+    "viewStatus": "archived",
     "date": "8/10/2022"
   },
   {
@@ -164,7 +164,7 @@
     "tech": ["Angular","NGXS","NestJS", "MongoDB"],
     "gitLink": ["https:/github.com/drbenn/mtlt"],
     "demoLink": "https:/danbennett.dev/mtlt/",
-    "archived": false,
+    "viewStatus": "past",
     "date": "8/25/2022"
   },
   {
@@ -178,7 +178,7 @@
     "tech": ["React"],
     "gitLink": ["https:/github.com/drbenn/guess-who-react"],
     "demoLink": "https:/drbenn.github.io/guess-who-react/",
-    "archived": false,
+    "viewStatus": "past",
     "date": "11/28/2022"
   },
   {
@@ -192,7 +192,7 @@
     "tech": ["Angular","NGXS","Leaflet"],
     "gitLink": ["https:/github.com/drbenn/charging-stations"],
     "demoLink": "https:/danbennett.dev/charging-stations",
-    "archived": false,
+    "viewStatus": "past",
     "date": "12/10/2022"
   },
   {
@@ -206,7 +206,7 @@
     "tech": ["React"],
     "gitLink": ["https:/github.com/drbenn/dbendevV4-react"],
     "demoLink": "",
-    "archived": false,
+    "viewStatus": "past",
     "date": "12/15/2022"
   },
   {
@@ -220,7 +220,7 @@
     "tech": ["Angular", "Web Audio API", "NGXS"],
     "gitLink": ["https:/github.com/drbenn/turbo-beat-5000"],
     "demoLink": "https:/danbennett.dev/turbo",
-    "archived": false,
+    "viewStatus": "past",
     "date": "04/05/2023"
   },
   {
@@ -247,7 +247,7 @@
     "tech": ["React", "Redux", "Python", "MySQL", "NodeJS"],
     "gitLink": ["https:/github.com/drbenn/grizzly-dividends", "https:/github.com/drbenn/grizzly-node-api", "https:/github.com/drbenn/dividend-servers"],
     "demoLink": "https:/danbennett.dev/grizzly",
-    "archived": false,
+    "viewStatus": "past",
     "date": "08/06/2023"
   }
 

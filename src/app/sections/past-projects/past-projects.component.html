@@ -34,7 +34,7 @@
     </ng-container> -->
 
         <ng-container *ngFor="let project of projects; let index">
-            <div *ngIf="!project.archived"
+            <div *ngIf="statusesInView.includes(project.viewStatus)"
                 class="relative h-7rem bg mx-5 my-3"
                 [ngStyle]="{'min-width': '24rem', 'width': '40vw', 'max-width': '30rem'}"
             >
@@ -68,7 +68,11 @@
 
         </ng-container>
     </div>
-    Do you want to see the super old projects?
+    <div class="" (click)="addArchivedProjectsToView()"
+     [ngClass]="statusesInView.includes('archived') ? 'archive-question-inactive' : 'mt-6 p-2 text-2xl font-bold text-600 cursor-pointer bg-bluegray-100 border-round-2xl border-solid border-2' "
+    >
+        <span *ngIf="!statusesInView.includes('archived')">View ancient projects</span>
+    </div>
 </div>
 
 <p-dialog [(visible)]="displayModal" [modal]="true" [style]="{width: '40vw', minWidth: '28rem', height: 'fit-content'}"

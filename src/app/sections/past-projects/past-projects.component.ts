@@ -14,6 +14,7 @@ export class PastProjectsComponent implements OnInit {
 
   protected projects: any;
   protected isTitleViewed: boolean = false;
+  protected statusesInView: string[] = ['past']; //options 'past', 'archived' and 'featured'
   // array items scroll
   protected arrayItems: any = {};
 
@@ -87,6 +88,10 @@ export class PastProjectsComponent implements OnInit {
       this.modalTechName.push(tech)
     });
     this.modalImgBackgroundPosition = project.imgBackgroundPosition;
+  };
+
+  protected addArchivedProjectsToView(): void {
+    this.statusesInView.push('archived');
   };
 
 }
