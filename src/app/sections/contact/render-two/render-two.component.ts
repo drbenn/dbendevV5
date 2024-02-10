@@ -16,12 +16,12 @@ export class RenderTwoComponent implements OnInit {
   @ViewChild('rendererContainer') rendererContainer: ElementRef | any;
   @HostListener('window:resize', ['$event'])
 	onResize(event: any) {
-      console.log(event);
-      const divWidth: number = this.rendererContainer.nativeElement.clientWidth;
-      const aspectRatio: number = 4/3;
-  this.renderer.setSize(divWidth, divWidth / aspectRatio);
-  // this.renderer.setSize(this.rendererContainer.nativeElement.clientWidth, this.rendererContainer.nativeElement.clientHeight);
-  this.camera.position.z = this.cameraZIndex;
+  //     console.log(event);
+  //     const divWidth: number = this.rendererContainer.nativeElement.clientWidth;
+  //     const aspectRatio: number = 4/3;
+  // this.renderer.setSize(divWidth, divWidth / aspectRatio);
+  // // this.renderer.setSize(this.rendererContainer.nativeElement.clientWidth, this.rendererContainer.nativeElement.clientHeight);
+  // this.camera.position.z = this.cameraZIndex;
     }
 
 
@@ -40,22 +40,11 @@ ngAfterViewInit() {
     this.renderer.setClearColor( 0x050505, 0.0 ); // the default - transparency for bg, replacement for this.scene.background with fully opaque bg
     this.rendererContainer.nativeElement.appendChild(this.renderer.domElement);
 
-    
-    // console.log(this.rendererContainer.nativeElement.clientHeight);
-    // console.log(this.rendererContainer.nativeElement.clientWidth);
-
-    // this.animateCube();
 }
 
-animateCube() {
-    // window.requestAnimationFrame(() => this.animateCube());
-    // this.cube.rotation.x += 0.01;
-    // this.cube.rotation.y += 0.02;
-    // this.renderer.render(this.scene, this.camera);
-}
 
   initRender() {
-    this.camera = new THREE.PerspectiveCamera( 27, window.innerWidth / window.innerHeight, 5, 3500 );
+    this.camera = new THREE.PerspectiveCamera( 24, 600/ 450, 5, 3500 );
     this.camera.position.z = this.cameraZIndex; // todo: og 1750, 3750 looks cool
 
     this.scene = new THREE.Scene();

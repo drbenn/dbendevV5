@@ -1,50 +1,77 @@
 <main
-    class="relative font-bold text-7xl mb-6 flex flex-column flex-nowrap justify-content-center align-items-start"
+    class="relative font-bold text-7xl mb-6 flex flex-column flex-nowrap justify-content-start align-items-center"
     [ngStyle]="{'min-height': '105vh'}"
+>
+    <div [ngStyle]="{'margin-top': '15rem', 'margin-bottom': '4rem'}">
+        Contact
+    </div>
+
+
+    <div class="flex flex-row flex-wrap justify-content-evenly align-items-center"
+    [ngStyle]="{'min-width': '25rem', 'width': '80vw', 'max-width': '45rem'}"
     >
-    Contact
 
-    <div class="w-full mt-6">  
-        <div class="flex flex-row flex-nowrap justify-content-start align-items-center">
-            <div>
-                <img src="../../../assets/img/misc/email.png" alt="email contact"
-                class="icon-hover mr-3"
-                [ngStyle]="{'width': '3rem', 'height': '2.5rem'}"
-                >
+        <!-- Left Side -->
+        <div>
+
+            <div class="w-full mt-6">  
+                <div class="icon-hover flex flex-row flex-nowrap justify-content-start align-items-center">
+                    <div>
+                        <img src="../../../assets/img/misc/email.png" alt="email contact"
+                        class="mr-3"
+                        [ngStyle]="{'width': '3rem', 'height': '2.5rem'}"
+                        >
+                    </div>
+                    <div class="font-light text-lg">
+                        <a href="mailto:bennett.daniel@gmail.com">bennett.daniel@gmail.com</a>
+                    </div>
+                </div>
             </div>
-            <div class="font-light text-lg">
-                <a href="mailto:bennett.daniel@gmail.com">bennett.daniel@gmail.com</a>
+        
+            <div class="w-full mt-3">  
+                <div class="icon-hover flex flex-row flex-nowrap justify-content-start align-items-center">
+                    <div>
+                        <img src="../../../assets/img/misc/github.png" alt="GitHub contact"
+                        class="mr-3"
+                        [ngStyle]="{'width': '3rem', 'height': '3rem'}"
+                        >
+                    </div>
+                    <div class="font-light text-lg">
+                        <a href="https://github.com/drbenn" target="_blank">drbenn@Github</a>
+                    </div>
+                </div>
             </div>
+        
+            <div class="w-full mt-3">  
+                <div class="icon-hover flex flex-row flex-nowrap justify-content-start align-items-center">
+                    <div>
+                        <img src="../../../assets/img/misc/linkedin.png" alt="LinkedIn contact"
+                        class="mr-3"
+                        [ngStyle]="{'width': '3rem', 'height': '3rem'}"
+                        >
+                    </div>
+                    <div class="font-light text-lg">
+                        <a href="https://www.linkedin.com/in/bennettdanielr/" target="_blank">bennettdanielr@LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+
         </div>
+
+
+        <!-- Right Side -->
+        <div class="mt-8">
+            <app-render-two></app-render-two>
+        </div>
+
+
+
+
+
+
     </div>
 
-    <div class="w-full mt-3">  
-        <div class="flex flex-row flex-nowrap justify-content-start align-items-center">
-            <div>
-                <img src="../../../assets/img/misc/github.png" alt="GitHub contact"
-                class="icon-hover mr-3"
-                [ngStyle]="{'width': '3rem', 'height': '3rem'}"
-                >
-            </div>
-            <div class="font-light text-lg">
-                <a href="https://github.com/drbenn" target="_blank">drbenn@Github</a>
-            </div>
-        </div>
-    </div>
 
-    <div class="w-full mt-3">  
-        <div class="flex flex-row flex-nowrap justify-content-start align-items-center">
-            <div>
-                <img src="../../../assets/img/misc/linkedin.png" alt="LinkedIn contact"
-                class="icon-hover mr-3"
-                [ngStyle]="{'width': '3rem', 'height': '3rem'}"
-                >
-            </div>
-            <div class="font-light text-lg">
-                <a href="https://www.linkedin.com/in/bennettdanielr/" target="_blank">bennettdanielr@LinkedIn</a>
-            </div>
-        </div>
-    </div>
 
 
 

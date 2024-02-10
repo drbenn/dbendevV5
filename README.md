@@ -3,6 +3,11 @@ https://medium.com/@navyjot/smooth-scroll-in-angular-c3e9942d23a1
 https://netbasal.com/anchors-away-how-to-create-smooth-scrolling-in-angular-a657e0ea9699
 
 
+# SArchitecture questions to answer in project post review
+- What did the high level solution lok like?
+- What technologies were used?
+- What were teh biggest risks and how did I overcome them?
+- If i could do it over again, how would I do it differently?
 
 # DbendevV5
 
