@@ -2,7 +2,12 @@
     class="relative font-bold text-7xl mb-6 flex flex-column flex-nowrap justify-content-start align-items-center"
     [ngStyle]="{'min-height': '105vh'}"
 >
-    <div [ngStyle]="{'margin-top': '15rem', 'margin-bottom': '4rem'}">
+    <div [ngStyle]="{'margin-top': '15rem', 'margin-bottom': '4rem'}"
+        pAnimateOnScroll
+        enterClass="fadein"
+        leaveClass="fadeout"
+        class="animation-duration-1000"
+    >
         Contact
     </div>
 

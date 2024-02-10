@@ -28,6 +28,7 @@ import { FeaturedProjectsComponent } from './sections/featured-projects/featured
 import { PastProjectsComponent } from './sections/past-projects/past-projects.component';
 import { MyStoryComponent } from './sections/my-story/my-story.component';
 import {TooltipModule} from 'primeng/tooltip';
+import { AnimateOnScrollModule } from 'primeng/animateonscroll';
 
 @NgModule({
   declarations: [
@@ -59,7 +60,8 @@ import {TooltipModule} from 'primeng/tooltip';
     BrowserAnimationsModule,
     CardModule,
     SidebarModule,
-    TooltipModule
+    TooltipModule,
+    AnimateOnScrollModule
   ],
   providers: [],
   bootstrap: [AppComponent]
