@@ -2,10 +2,10 @@
     <div class="text-xs font-base w-5" *ngIf="!isMobileView">
         <ul>
             <li class="cursor-pointer" (click)="onClickScroll('scroll-to-nav')"><i class="pi pi-code" style="font-size: 0.7rem"></i></li>
-            <li class="cursor-pointer" (click)="onClickScroll('scroll-to-projects')">Projects</li>
-            <li class="cursor-pointer" (click)="onClickScroll('scroll-to-skills')">Tech & Exp</li>
-            <li class="cursor-pointer" (click)="onClickScroll('scroll-to-about')">About</li>
-            <li class="cursor-pointer" (click)="onClickScroll('scroll-to-contact')">Contact</li>
+            <li class="cursor-pointer link-hover" (click)="onClickScroll('scroll-to-skills')">Tech & Exp</li>
+            <li class="cursor-pointer link-hover" (click)="onClickScroll('scroll-to-projects')">Projects</li>
+            <!-- <li class="cursor-pointer link-hover" (click)="onClickScroll('scroll-to-about')">About</li> -->
+            <li class="cursor-pointer link-hover" (click)="onClickScroll('scroll-to-contact')">Contact</li>
         </ul>
     </div>
 </nav>
@@ -28,20 +28,26 @@
 </div>
 
 
-<p-sidebar [visible]="visibleSidebar" [fullScreen]="true" [baseZIndex]="10000" (onHide)="sidebarClose()" [showCloseIcon]="true">
-    <div class="cursor-pointer" (click)="onClickScroll('scroll-to-nav')">
+<p-sidebar [(visible)]="visibleSidebar" [fullScreen]="true" class="text-6xl text-semibold">
+    <div class="cursor-pointer link-hover ml-4" (click)="onClickScroll('scroll-to-nav'); sidebarClose()">
         Top
     </div>
-    <div class="cursor-pointer" (click)="onClickScroll('scroll-to-projects')">
+    <div class="cursor-pointer link-hover mt-4 ml-4" (click)="onClickScroll('scroll-to-skills'); sidebarClose()">
+        Tech & Exp
+    </div>
+    <div class="cursor-pointer link-hover mt-4 ml-4" (click)="onClickScroll('scroll-to-projects'); sidebarClose()">
         Projects
     </div>
-    <div class="cursor-pointer" (click)="onClickScroll('scroll-to-skills')">
-        Skills
-    </div>
-    <div class="cursor-pointer" (click)="onClickScroll('scroll-to-contact')">
+    <div class="cursor-pointer link-hover mt-4 ml-4" (click)="onClickScroll('scroll-to-contact'); sidebarClose()">
         Contact
     </div>
 </p-sidebar>
+
+
+<!-- <p-sidebar [(visible)]="visibleSidebar" [fullScreen]="true">
+    <h3>Full Screen Sidebar</h3>
+</p-sidebar>
+<p-button (click)="visibleSidebar = true" icon="pi pi-th-large"></p-button> -->
 
 
 <!-- <nav class="fixed top-0 z-5 w-screen px-3 py-4 flex flex-row justify-content-between align-items-center">

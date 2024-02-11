@@ -59,3 +59,11 @@ nav li {
 
 
 
+.link-hover {
+    transition: 80ms ease-in;
+}
+
+.link-hover:hover {
+    color: vars.$alt-grad-2;
+    transition: 80ms ease-in;
+}

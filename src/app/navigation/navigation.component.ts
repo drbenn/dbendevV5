@@ -9,7 +9,7 @@ import { Component, HostListener, Input, OnChanges, OnInit } from '@angular/core
 export class NavigationComponent implements OnInit, OnChanges {
   @Input() isMobileView!: boolean;
   @Input() yScrollPosition: number = 0;
-  protected visibleSidebar!: boolean;
+  protected visibleSidebar: boolean = false;
   protected leftCurlies: string = '{{';
   protected rightCurlies: string  = '}}';
   protected isNavSticky: boolean = false;
