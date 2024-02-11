@@ -8,7 +8,7 @@ import { FooterComponent } from './sections/footer/footer.component';
 import { IntroComponent } from './design-dark-one/intro/intro.component';
 import { NavComponent } from './design-dark-one/nav/nav.component';
 import { ProjectsComponent } from './design-dark-one/projects/projects.component';
-import { SkillsComponent } from './design-dark-one/skills/skills.component';
+import { SkillsComponent } from './sections/skills/skills.component';
 import { RenderTwoComponent } from './sections/contact/render-two/render-two.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ScrollingComponent } from './design-dark-one/scrolling/scrolling.component';

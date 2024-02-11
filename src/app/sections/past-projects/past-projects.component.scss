@@ -64,7 +64,9 @@
     height: 100%;
     width: 100%;
     // background: linear-gradient(160deg, rgba(255, 255, 255, 0), rgba(255, 45, 153, 0.365),  rgba(0, 0, 207, 0.591));
-    background: linear-gradient(160deg, rgba(255, 255, 255, 0), vars.$alt-grad-1,  vars.$alt-grad-2);
+    // background: linear-gradient(160deg, rgba(255, 255, 255, 0), vars.$alt-grad-1,  vars.$alt-grad-2);
+    // background: linear-gradient(180deg, #00000035, #0000007e);
+    background: linear-gradient(180deg, #00000035, rgba(38, 45, 107, 0.352));
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.191);
     z-index: 1;
     border-radius: 1rem;
@@ -203,7 +205,7 @@
     }
   }
 
-  .icon-touch:hover {
+.icon-touch:hover {
     transform: scale(1);
     animation: touched-icon 200ms ease-in;
 }
@@ -248,7 +250,24 @@
     text-decoration: none;
   }
 
+.text-shadow {
+    // text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.75);
+    -webkit-text-stroke-width: 0.15px;
+    -webkit-text-stroke-color: black;
+}
+
 
 .archive-question-inactive {
     height: 0rem;
+}
+
+.archive-question-active {
+    transition: 200ms ease-in;
+    border-radius: 1rem;
+}
+
+.archive-question-active:hover {
+    background-color: rgba(45, 54, 148, 0.13);
+    border-radius: 1rem;
+    transition: 200ms ease-in
 }

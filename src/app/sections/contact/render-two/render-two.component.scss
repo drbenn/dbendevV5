@@ -1,13 +1,19 @@
 .three-container {
-    height: 18rem; // maintains 4:3 aspect ratio (height is 75% of width)
-    width: 18rem;
-    // min-height: 20rem;
-    // min-width: 16rem;
-    // max-height: 100%;
-    // max-width: 100%;
-    // height: 35vw;
-    // width: 25vw;
-    color: #fe0f0f;
-    filter: blur(0.6px);
-    // background-color: rgba(128, 0, 109, 0.458);
-  }
+  height: 18rem; // maintains 4:3 aspect ratio (height is 75% of width)
+  width: 18rem;
+  // min-height: 20rem;
+  // min-width: 16rem;
+  // max-height: 100%;
+  // max-width: 100%;
+  // height: 35vw;
+  // width: 25vw;
+  filter: blur(0.6px);
+  transition: 300ms ease-in;
+  // background-color: rgba(128, 0, 109, 0.458);
+}
+
+.three-container:hover {
+  filter: blur(0px) hue-rotate(120deg);
+  border-radius: 30rem;
+  transition: 300ms ease-in;
+}

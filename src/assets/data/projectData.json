@@ -246,9 +246,24 @@
     "imgBackgroundPosition": "center center",
     "tech": ["React", "Redux", "Python", "MySQL", "NodeJS"],
     "gitLink": ["https:/github.com/drbenn/grizzly-dividends", "https:/github.com/drbenn/grizzly-node-api", "https:/github.com/drbenn/dividend-servers"],
-    "demoLink": "https:/danbennett.dev/grizzly",
+    "demoLink": "https://danbennett.dev/grizzly",
     "viewStatus": "past",
     "date": "08/06/2023"
+  },
+  {
+    "index":18,
+    "title":"Cashamole",
+    "oneLine": "Fullstack personal finance web application.",
+    "timeLine": "Feb 2024",
+    "detail":"Fullstack dividend return projection",
+    "lessonsLearned":["Be aware of deployment limitations, for instance started with NestJS version 10, however, NameCheap only supports up to Node 14 and needed to downgrade NestJS to version 9.", " Have smaller, more precise project ideas unless I want to spend a6 months+ working on a startup"],
+    "img":"../../assets/img/projects/featured/cashamole-featured.png",
+    "imgBackgroundPosition": "center center",
+    "tech": ["Angular","NGXS","NestJS", "MySQL", "PrimeNG"],
+    "gitLink": ["https://github.com/drbenn/cashamole"],
+    "demoLink": "https://cashamole.com",
+    "viewStatus": "featured",
+    "date": "02/10/2024"
   }
 
 ]

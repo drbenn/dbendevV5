@@ -2,7 +2,7 @@ import { Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/co
 
 // https://prototyp.digital/blog/how-to-implement-intersection-observer-api-in-angular
 @Component({
-  selector: 'app-skills',
+  selector: 'skills',
   templateUrl: './skills.component.html',
   styleUrls: ['./skills.component.scss']
 })
@@ -20,7 +20,7 @@ export class SkillsComponent implements OnInit {
     },
     {
       name: 'JavaScript',
-      imgUrl: '../assets/img/tech/js.png',
+      imgUrl: '../assets/img/tech/javascript.png',
       enterAnimClass: 'skill-anim-js',
       startPosClass: 'skill-start-js',
       endPosClass: '',
@@ -89,6 +89,13 @@ export class SkillsComponent implements OnInit {
       endPosClass: '',
     },
     {
+      name: 'Bash',
+      imgUrl: '../assets/img/tech/bash.png',
+      enterAnimClass: 'skill-anim-sass',
+      startPosClass: 'skill-start-sass',
+      endPosClass: '',
+    },
+    {
       name: 'Docker',
       imgUrl: '../assets/img/tech/docker.png',
       enterAnimClass: 'skill-anim-docker',
@@ -101,7 +108,7 @@ export class SkillsComponent implements OnInit {
     //   enterAnimClass: 'skill-anim-postgres',
     //   startPosClass: 'skill-start-postgres',
     //   endPosClass: '',
-    // }
+    // },
     {
       name: 'Bootstrap',
       imgUrl: '../assets/img/tech/bootstrap.png',

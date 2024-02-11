@@ -1,6 +1,6 @@
 <main
     class="relative font-bold text-7xl mb-6 flex flex-column flex-nowrap justify-content-start align-items-center"
-    [ngStyle]="{'min-height': '105vh'}"
+    [ngStyle]="{'min-height': '50rem'}"
 >
     <div [ngStyle]="{'margin-top': '15rem', 'margin-bottom': '4rem'}"
         pAnimateOnScroll
@@ -19,7 +19,12 @@
         <!-- Left Side -->
         <div>
 
-            <div class="w-full mt-6">  
+            <div class="w-full mt-6"
+            pAnimateOnScroll
+            enterClass="fadeinleft"
+            leaveClass="fadeout"
+            class="animation-duration-1000"
+            >  
                 <div class="icon-hover flex flex-row flex-nowrap justify-content-start align-items-center">
                     <div>
                         <img src="../../../assets/img/misc/email.png" alt="email contact"
@@ -33,7 +38,12 @@
                 </div>
             </div>
         
-            <div class="w-full mt-3">  
+            <div class="w-full"
+            pAnimateOnScroll
+            enterClass="fadeinright"
+            leaveClass="fadeout"
+            class="animation-duration-1000"
+            >  
                 <div class="icon-hover flex flex-row flex-nowrap justify-content-start align-items-center">
                     <div>
                         <img src="../../../assets/img/misc/github.png" alt="GitHub contact"
@@ -47,7 +57,12 @@
                 </div>
             </div>
         
-            <div class="w-full mt-3">  
+            <div class="w-full"
+            pAnimateOnScroll
+            enterClass="fadeinleft"
+            leaveClass="fadeout"
+            class="animation-duration-1000"
+            >  
                 <div class="icon-hover flex flex-row flex-nowrap justify-content-start align-items-center">
                     <div>
                         <img src="../../../assets/img/misc/linkedin.png" alt="LinkedIn contact"
@@ -65,7 +80,12 @@
 
 
         <!-- Right Side -->
-        <div class="mt-8">
+        <div class="mt-8"
+        pAnimateOnScroll
+        enterClass="zoomin"
+        leaveClass="fadeout"
+        class="animation-duration-1000"
+        >
             <app-render-two></app-render-two>
         </div>
 

@@ -1,11 +1,38 @@
-<navigation [isMobileView]="isMobileView" [yScrollPosition]="yScrollPosition"></navigation>
+<navigation 
+  [isMobileView]="isMobileView"
+  [yScrollPosition]="yScrollPosition"
+  id="scroll-to-nav"  
+></navigation>
 <main class="w-full flex flex-column flex-nowrap justify-content-start align-items-center">
 
   <hello [isMobileView]="isMobileView"></hello>
-  <past-projects [isMobileView]="isMobileView" [mobileViewWidth]="mobileViewWidth"></past-projects>
-  <featured-projects [isMobileView]="isMobileView" [mobileViewWidth]="mobileViewWidth"></featured-projects>
-  <contact class="w-full"></contact>
-<footer class="w-full" ></footer>
+
+  <skills
+    class="w-full" 
+    id="scroll-to-skills"
+  ></skills>
+  
+  <featured-projects
+    [isMobileView]="isMobileView"
+    [mobileViewWidth]="mobileViewWidth"
+    id="scroll-to-projects"
+  ></featured-projects>
+
+  <past-projects
+    [isMobileView]="isMobileView"
+    [mobileViewWidth]="mobileViewWidth"
+  ></past-projects>
+
+
+  
+  <contact 
+    class="w-full"
+    id="scroll-to-contact"  
+  ></contact>
+
+  <footer class="w-full"></footer>
+
+
 <!-- <app-projects 
 class="w-full" 
 id="scroll-to-projects"

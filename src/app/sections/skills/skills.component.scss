@@ -22,9 +22,9 @@
 
 
 .skill {
-    border: 1px solid rgb(255, 255, 255);
+    // border: 1px solid rgb(255, 255, 255);
+    // background: linear-gradient(150deg, rgba(38, 74, 255, 0.374), rgba(255, 114, 250, 0.3));
     border-radius: 2px;
-    background: linear-gradient(150deg, rgba(38, 74, 255, 0.374), rgba(255, 114, 250, 0.3));
     transform:
         perspective(800px)
         rotateY(10deg) scale(0.9)
