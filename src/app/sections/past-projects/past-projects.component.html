@@ -2,7 +2,7 @@
 [ngStyle]="{'min-height': '150vh', 'padding': '10rem 0rem'}"
 >
 
-    <div class="font-bold"
+    <!-- <div class="font-bold"
         [ngStyle]="{'padding': '10rem 0rem 5rem 0rem' }"
         [ngClass]="titleClass(isTitleViewed, isMobileView)"
         appObserveElement
@@ -11,7 +11,16 @@
         [isContinuous]="true" 
     >
         Past Project(s)
+    </div> -->
+    <div [ngStyle]="{'margin-top': '15rem', 'margin-bottom': '4rem'}"
+    pAnimateOnScroll
+    enterClass="fadeindown"
+    leaveClass="fadeout"
+    class="animation-duration-500 text-7xl font-bold"
+    >
+        Past Projects
     </div>
+
     <div class="w-10 flex flex-row flex-wrap justify-content-center align-items-start"
     [ngStyle]="{'padding-top':'0rem', 'max-width': '140rem'}"
     >
@@ -71,7 +80,14 @@
     <div class="" (click)="addArchivedProjectsToView()"
      [ngClass]="statusesInView.includes('archived') ? 'archive-question-inactive' : 'archive-question-active mt-8 px-4 py-2 text-xl font-base text-800 cursor-pointer' "
     >
-        <span *ngIf="!statusesInView.includes('archived')">View all projects?</span>
+        <span *ngIf="!statusesInView.includes('archived')"
+        pAnimateOnScroll
+        enterClass="fadeindown"
+        leaveClass="fadeout"
+        class="animation-duration-1000 "
+        
+        
+        >View all projects?</span>
     </div>
 </div>
 

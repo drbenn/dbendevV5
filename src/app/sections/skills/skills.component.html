@@ -4,15 +4,36 @@
 
     <div class="m:w-12 md:w-10 xl:w-6 flex flex-column justify-content-center align-items-center">
         <div class="w-full px-4 mb-6 text-start">
-            <h1 class="text-6xl">
+            <!-- <h1 class="text-6xl">
                 Web Technologies & Experience
-            </h1>
-            <span class="text-base font-light">
-                <p>
-                    My professional experience is with front-end web development and the Angular Framework. But I always reach into the semi-unknown and expand my knowledge base.
+            </h1> -->
+
+            <div [ngStyle]="{'margin-top': '15rem', 'margin-bottom': '4rem'}"
+            pAnimateOnScroll
+            enterClass="fadeindown"
+            leaveClass="fadeout"
+            class="animation-duration-500 text-7xl font-bold"
+            >
+                Technologies & Experience
+            </div>
+
+            <span class="text-base font-light line-height-3">
+                <p
+                pAnimateOnScroll
+                enterClass="fadeinleft"
+                leaveClass="fadeoutright"
+                class="animation-duration-500"
+                >
+                    My professional experience is with front-end web development and the Angular framework. However, I always reach into the adjacent and semi-unknown to expand my knowledge base.
                 </p>
-                <p>
-                    To confront my professional front-end work, I do full-stack projects in my free-time primarily with Node, NestJs and the technologies listed below. As a self-taught web developer, previous accountant and now inactive CPA, I am always in a state of growth, expanding my knowledge and it's applications..
+                <p
+                pAnimateOnScroll
+                enterClass="fadeinright"
+                leaveClass="fadeoutleft"
+                class="animation-duration-500"
+                
+                >
+                    To supplement my professional front-end work, I do full-stack projects in my free-time primarily with Node, NestJs and the technologies listed below. As a self-taught web developer, previous accountant and now inactive CPA, I am always in a state of growth, and exited to learn and understand at a deeper level.
                 </p>
             </span>
         </div>
@@ -20,7 +41,10 @@
     
         <!-- section needs wrapper div to restrict width as flex box grows and then wraps but dom maintains width from expansion -->
         <section 
-            class="w-full flex flex-row flex-wrap justify-content-center align-items-center bg-gray-100 py-3 px-2 border-round-xl"
+            class="w-11 flex flex-row flex-wrap justify-content-center align-items-center bg-gray-100 py-3 px-2 border-round-lg animation-duration-500"
+            pAnimateOnScroll
+            enterClass="fadeindown"
+            leaveClass="fadeout"
         >   
             <div *ngFor="let item of [0]; let index = index "
                 appObserveElement

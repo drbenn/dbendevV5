@@ -2,7 +2,7 @@
 [ngStyle]="{'height': '150vh'}"
 >
     <div class="w-full relative flex flex-wrap flex-column justify-content-center align-items-center">
-        <div class="font-bold"
+        <!-- <div class="font-bold"
         [ngStyle]="{'padding': '10rem 0rem' }"
         [ngClass]="titleClass(isTitleViewed, isMobileView)"
         appObserveElement
@@ -11,7 +11,17 @@
         [isContinuous]="true" 
         >
             Featured Project(s)
+        </div> -->
+
+        <div [ngStyle]="{'margin-top': '15rem', 'margin-bottom': '4rem'}"
+        pAnimateOnScroll
+        enterClass="fadeindown"
+        leaveClass="fadeout"
+        class="animation-duration-500 text-7xl font-bold"
+        >
+            Featured Project
         </div>
+        
         <!-- <img src="../../assets/img/misc/jr-korpa-9XngoIpxcEo-unsplash.jpg" alt=""
         [ngStyle]="{'width': heroWidth, 'border-radius': heroRadius, 'filter': heroGrayscale }"
 
