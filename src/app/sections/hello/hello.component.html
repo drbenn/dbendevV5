@@ -3,23 +3,29 @@
 
 >
 
-    <div class="relative text-8xl flex flex-wrap flex-column justify-content-start align-items-start bg-transparent"
+    <div class="overflow-hidden">
+
+        <div class="gradient-ball"></div>
+        <div class="gradient-ball-overlay"></div>
+
+    </div>
+
+    <div class="relative z-3 text-8xl flex flex-wrap flex-column justify-content-start align-items-start bg-transparent"
     [ngStyle]="isMobileView ? 
     {'margin-top':'6rem', 'padding': '2rem 3rem', 'border-radius': '1rem' } : 
     {'margin-top':'8rem', 'padding': '2rem 8rem 6rem 8rem', 'border-radius': '6rem' }"
     >
-        <div class="absolute bottom-right-gradient"
+        <!-- <div class="absolute bottom-right-gradient"
         [ngStyle]="isMobileView ? 
         {'border-radius': '1rem' } : 
         {'border-radius': '0.5rem' }"
+        ></div> -->
         
-        ></div>
-        
-        <div class="absolute "
+        <!-- <div class="absolute "
         [ngClass]="isMobileView ? '' : 'top-left-border' "
         >
+        </div> -->
 
-    </div>
     <div class="font-light">Hello,</div>
     <div class="font-light">I am <span class="font-bold name-gradient">Dan Bennett</span></div>
     <div class="w-full flex flex-nowrap flex-row justify-content-end align-items-start"
