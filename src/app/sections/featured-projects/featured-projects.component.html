@@ -1,5 +1,5 @@
 <div class="w-full flex flex-wrap flex-column justify-content-start align-items-end"
-[ngStyle]="{'height': '105vh'}"
+[ngStyle]="{'min-height': '105vh'}"
 >
     <div class="w-full relative flex flex-wrap flex-column justify-content-center align-items-center">
         <!-- <div class="font-bold"
@@ -30,14 +30,98 @@
         (isIntersecting)="isIntersecting($event, 'hero-img')"
         [isContinuous]="true" 
         > -->
-        <img src="../../assets/img/projects/featured/cashamole-featured.png" alt=""
-            class="feature-border-shadow p-4"
-            [ngStyle]="{'width': heroWidth, 'border-radius': heroRadius, 'filter': heroGrayscale }"
+        <ng-container *ngFor="let project of projects">
+
+            <a [href]="project.demoLink" target="_blank">
+
+            <div class="flex flex justify-content-center align-items-center">
+                <img [src]="project.img" [alt]="project.title"
+                    class="feature-border-shadow p-1"
+                    [ngStyle]="{'width': heroWidth, 'border-radius': heroRadius, 'filter': heroGrayscale }"
+                    
+                    appObserveElement
+                    #intersection="intersection"
+                    (isIntersecting)="isIntersecting($event, 'hero-img')"
+                    [isContinuous]="true" 
+                >
+            </div>
+        </a>
+
+        <div>
+
+            <div class="w-full flex flex-column justify-content-start align-items-start text-800 mt-6">
+                <div
+                    pAnimateOnScroll
+                    enterClass="fadeinleft"
+                    leaveClass="fadeout"
+                    class="animation-duration-500 text-2xl font-semibold"
+                >
+                    {{ project.title }}
+                </div>
+
+                <div
+                pAnimateOnScroll
+                enterClass="fadeinright"
+                leaveClass="fadeout"
+                class="animation-duration-500 text-base font-light mt-2"
+                
+                
+                >
+                    {{ project.oneLine }}
+                </div>
+
+                <div
+                pAnimateOnScroll
+                enterClass="fadeinleft"
+                leaveClass="fadeout"
+                class="animation-duration-500 text-base font-light mt-2"
+                >
+                    {{ project.detail }}
+                </div>
+            </div>
+
+
+            <div *ngIf="project.gitLink && project.gitLink.length" 
+            pAnimateOnScroll
+            enterClass="zoomin"
+            leaveClass="fadeout"
             
-            appObserveElement
-            #intersection="intersection"
-            (isIntersecting)="isIntersecting($event, 'hero-img')"
-            [isContinuous]="true" 
-        >
+            class="mb-2 font-light text-base animation-duration-500 ">
+                <a [href]="project.gitLink[0]" target="_blank">Link to GitHub repository</a>
+            </div>
+            <div *ngIf="project.demoLink && project.demoLink.length" 
+            pAnimateOnScroll
+            enterClass="zoomin"
+            leaveClass="fadeout"
+            
+            class="mb-2 font-light text-base animation-duration-500 ">
+                <a [href]="project.demoLink" target="_blank">Link to demo</a>
+            </div>
+            <div 
+            pAnimateOnScroll
+            enterClass="fadeinleft"
+            leaveClass="fadeout"
+            
+            class="flex flex-nowrap flex-row justify-content-start align-items-start animation-duration-500 "
+            >
+                <ng-container *ngFor="let tech of project.tech; let i = index">
+                    <div class="ml-2 my-2">
+                        <img 
+                            [src]="'../../../../../assets/img/tech/' + tech.toLowerCase() + '.png'" alt="" 
+                            [ngStyle]="{'width': '2.5rem', 'height': '2.5rem'}"
+                            [pTooltip]="tech"
+                            tooltipPosition="top"
+                            class="icon-touch mr-4"
+                        />
+                    </div>
+                </ng-container>
+            </div>
+        </div>
+
+
+
+        
+        </ng-container>
+
     </div>
 </div>

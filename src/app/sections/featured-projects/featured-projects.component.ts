@@ -1,4 +1,6 @@
 import { Component, HostListener, Input, OnInit } from '@angular/core';
+import { take } from 'rxjs';
+import { ProjectDataService } from 'src/app/design-dark-one/shared/project-data/project-data.service';
 
 @Component({
   selector: 'featured-projects',
@@ -6,6 +8,7 @@ import { Component, HostListener, Input, OnInit } from '@angular/core';
   styleUrls: ['./featured-projects.component.scss']
 })
 export class FeaturedProjectsComponent implements OnInit {
+  protected projects: any;
   @Input() isMobileView!: boolean;
   @Input() mobileViewWidth!: number;
   protected yScrollPosition: number = 0;
@@ -23,9 +26,21 @@ export class FeaturedProjectsComponent implements OnInit {
 
   
 
-  constructor() { }
+  constructor(
+    private dataService: ProjectDataService
+  ) { }
 
   ngOnInit(): void {
+    this.dataService.initData().pipe(take(1)).subscribe((data: any) => {
+      const newToOld: any[] = [];
+      if (data && data.length) {
+        data.filter((project: any) => project.viewStatus === 'featured' )
+        .forEach((item:any) => {
+          newToOld.unshift(item)
+        });
+      };
+      this.projects = newToOld;
+    });
     this.yScrollPosition = window.scrollY;
       if (window.innerWidth > this.mobileViewWidth) {
         this.isMobileView = false;
@@ -73,7 +88,7 @@ export class FeaturedProjectsComponent implements OnInit {
     
     // HERO SIZING
     const heroScaleIntensity: number = 1.15;
-    if (this.heroImgIsIntersecting && this.scrollingDirection === 'down' && parseInt(this.heroWidth.slice(0,-1)) >= 75 ) {
+    if (this.heroImgIsIntersecting && this.scrollingDirection === 'down' && parseInt(this.heroWidth.slice(0,-1)) >= 50 ) {
       // get smaller
       this.heroWidth = (parseFloat(this.heroWidth.slice(0,-1)) - heroScaleIntensity).toString() + '%';
     } else if (this.heroImgIsIntersecting && this.scrollingDirection === 'up' && parseInt(this.heroWidth.slice(0,-1)) <= 99 ) {
@@ -83,7 +98,7 @@ export class FeaturedProjectsComponent implements OnInit {
 
     // HERO RADIUS
     const heroRadiusIntensity: number = 1;
-    if (this.heroImgIsIntersecting && this.scrollingDirection === 'down' && parseInt(this.heroRadius.slice(0,-2)) <= 40 ) {
+    if (this.heroImgIsIntersecting && this.scrollingDirection === 'down' && parseInt(this.heroRadius.slice(0,-2)) <= 15 ) {
       // get rounder
       this.heroRadius = (parseFloat(this.heroRadius.slice(0,-2)) + heroRadiusIntensity).toString() + 'px';
     } else if (this.heroImgIsIntersecting && this.scrollingDirection === 'up' && parseInt(this.heroRadius.slice(0,-2)) >= 0 ) {

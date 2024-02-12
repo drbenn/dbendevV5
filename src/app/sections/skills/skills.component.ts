@@ -215,6 +215,13 @@ export class SkillsComponent implements OnInit {
       startPosClass: 'skill-start-jira',
       endPosClass: '',
     },
+    {
+      name: 'Figma',
+      imgUrl: '../assets/img/tech/figma.png',
+      enterAnimClass: 'skill-anim-jira',
+      startPosClass: 'skill-start-jira',
+      endPosClass: '',
+    },
   ]
 
   constructor(  
