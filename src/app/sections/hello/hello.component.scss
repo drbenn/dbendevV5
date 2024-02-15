@@ -23,8 +23,8 @@
   }
 
   .name-gradient {
-    -webkit-text-stroke-width: 0.2px;
-    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: 1.5px;
+    -webkit-text-stroke-color: rgba(0, 0, 0, 0.873);
     // background: linear-gradient(65deg ,#fffdc3, #ed0d849b);
     // background: linear-gradient(65deg ,#c33763b2, #1d2571b2);
     // background: linear-gradient(65deg ,#360033, #0b8793);
@@ -35,17 +35,20 @@
     // background: linear-gradient(65deg ,#616161, #9bc5c3);
     // background: linear-gradient(65deg ,#243949, #517fa4);
     // background: linear-gradient(65deg ,#b5b5b51f, rgba(48, 111, 105, 0.342));
-    background: linear-gradient(65deg ,#4b6eb5b4, rgba(0, 93, 122, 0.647));
-    
+    // background: linear-gradient(65deg ,#4b6eb5b4, rgba(0, 93, 122, 0.647));
+    background: url('../../../assets/img/misc/pexels-steve-johnson-1509534.jpg');
     background-size: cover;
+    filter: brightness(160%) hue-rotate(30deg) contrast(50%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 
   .text-clip {
-    -webkit-text-stroke-width: 0.2px;
-    -webkit-text-stroke-color: black;
-    // background: url('../assets/img/misc/jr-korpa-9XngoIpxcEo-unsplash.jpg');
+    // -webkit-text-stroke-width: 0.2px;
+    // -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: 1.0px;
+    // -webkit-text-stroke-color: rgba(0, 0, 0, 0.873);
+    // background: url('../../../assets/img/misc/pexels-steve-johnson-1509534.jpg');
     // background-size: cover;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -59,7 +62,7 @@
 
     // background: vars.$theme-color-1;
     // background: #b5b5b51f;
-    background: rgba(0, 0, 0, 0.6);
+    // background: rgba(0, 0, 0, 0.6);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: intro-line-1-anim 6s linear;
@@ -68,7 +71,7 @@
   .intro-line-2 {
     // background: vars.$theme-color-2;
     // background: #b5b5b559;
-    background: rgba(0, 0, 0, 0.6);
+    // background: rgba(0, 0, 0, 0.6);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: intro-line-2-anim 6s linear;
@@ -92,8 +95,8 @@
   @keyframes intro-line-1-anim {
     0% { 
       background: transparent;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      // -webkit-background-clip: text;
+      // -webkit-text-fill-color: transparent;
       opacity: 0;
       transform: translate(5rem, 0rem);
     }
@@ -105,42 +108,42 @@
       transform: translate(5rem, 0rem);
     }
     21% { 
-      background: transparent;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      // background: transparent;
+      // -webkit-background-clip: text;
+      // -webkit-text-fill-color: transparent;
       opacity: 1;
       transform: translate(0rem, 0rem);
     }
     22% { 
       // background: rgba(255, 253, 195, 0);
-      background: rgba(0, 0, 0, 0);
-      background-size: 50%;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      // background: rgba(0, 0, 0, 0);
+      // background-size: 50%;
+      // -webkit-background-clip: text;
+      // -webkit-text-fill-color: transparent;
       opacity: 1;
     }
     26% { 
       // background: rgba(255, 253, 195, 0.5);
-      background: rgba(0, 0, 0, 0.3);
-      background-size: 50%;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      // background: rgba(0, 0, 0, 0.3);
+      // background-size: 50%;
+      // -webkit-background-clip: text;
+      // -webkit-text-fill-color: transparent;
       opacity: 1;
     }
     33% { 
       // background: rgb(255, 253, 195);
-      background: rgba(0, 0, 0, 0.6);
-      background-size: 50%;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      // background: rgba(0, 0, 0, 0.6);
+      // background-size: 50%;
+      // -webkit-background-clip: text;
+      // -webkit-text-fill-color: transparent;
       opacity: 1;
     }
     100% { 
       // background: rgb(255, 253, 195);
-      background: rgba(0, 0, 0, 0.6);
-      background-size: 50%;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      // background: rgba(0, 0, 0, 0.6);
+      // background-size: 50%;
+      // -webkit-background-clip: text;
+      // -webkit-text-fill-color: transparent;
       opacity: 1;
       transform: translate(0rem, 0rem);
     }
@@ -149,9 +152,9 @@
 
   @keyframes intro-line-2-anim {
     0% { 
-      background: transparent;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      // background: transparent;
+      // -webkit-background-clip: text;
+      // -webkit-text-fill-color: transparent;
       opacity: 0;
       transform: translate(5rem, 0rem);
     }
@@ -163,42 +166,42 @@
       transform: translate(5rem, 0rem);
     }
     42% { 
-      background: transparent;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      // background: transparent;
+      // -webkit-background-clip: text;
+      // -webkit-text-fill-color: transparent;
       opacity: 1;
       transform: translate(0rem, 0rem);
     }
     43% { 
       // background:#eba61b1b;
-      background: rgba(0, 0, 0, 0);
-      background-size: 50%;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      // background: rgba(0, 0, 0, 0);
+      // background-size: 50%;
+      // -webkit-background-clip: text;
+      // -webkit-text-fill-color: transparent;
       opacity: 1;
     }
     47% { 
       // background: #eba61b32;
-      background: rgba(0, 0, 0, 0.3);
-      background-size: 50%;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      // background: rgba(0, 0, 0, 0.3);
+      // background-size: 50%;
+      // -webkit-background-clip: text;
+      // -webkit-text-fill-color: transparent;
       opacity: 1;
     }
     54% { 
       // background: rgba(255, 253, 195, 0.647);
-      background: rgba(0, 0, 0, 0.6);
-      background-size: 50%;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      // background: rgba(0, 0, 0, 0.6);
+      // background-size: 50%;
+      // -webkit-background-clip: text;
+      // -webkit-text-fill-color: transparent;
       opacity: 1;
     }
     100% { 
       // background: #eba61b5c;
-      background: rgba(0, 0, 0, 0.6);
-      background-size: 50%;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      // background: rgba(0, 0, 0, 0.6);
+      // background-size: 50%;
+      // -webkit-background-clip: text;
+      // -webkit-text-fill-color: transparent;
       opacity: 1;
       transform: translate(0rem, 0rem);
     }

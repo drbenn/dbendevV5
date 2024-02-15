@@ -3,12 +3,12 @@
 
 >
 
-    <div class="overflow-hidden">
+    <!-- <div class="overflow-hidden">
 
         <div class="gradient-ball"></div>
         <div class="gradient-ball-overlay"></div>
 
-    </div>
+    </div> -->
 
     <div class="relative z-3 text-8xl flex flex-wrap flex-column justify-content-start align-items-start bg-transparent"
     [ngStyle]="isMobileView ? 
@@ -28,15 +28,17 @@
 
     <div class="font-light">Hello,</div>
     <div class="font-light">I am <span class="font-bold name-gradient">Dan Bennett</span></div>
-    <div class="w-full flex flex-nowrap flex-row justify-content-end align-items-start"
+    <div class="w-full flex flex-nowrap flex-row justify-content-start align-items-start"
         [ngClass]="isMobileView ? 'text-5xl' : 'text-7xl' "
     >
-        <div [ngStyle]="{'min-width': '2.75rem'}">a  :</div>
+        <!-- <div [ngStyle]="{'min-width': '2.75rem'}">a  :</div> -->
+        <div class="w-3"></div>
         <div class="font-bold ml-5 flex flex-nowrap flex-column justify-content-around align-items-start">
             <div class="text-clip intro-line-1">Full Stack</div>
             <!-- <div>Tenacious []</div> -->
-            <div class="text-clip intro-line-2">Self-taught</div>
-            <div class="text-clip intro-line-3">Web Developer</div>
+            <div class="text-clip intro-line-2">Web Developer</div>
+            <!-- <div class="text-clip intro-line-2">Self-taught</div>
+            <div class="text-clip intro-line-3">Web Developer</div> -->
             <!-- <div class="font-light mr-4 mt-2 text-100 intro-line-4"
                 [ngStyle]="{'max-width': '18rem', 'font-size': '0.75rem'}"  
             >
