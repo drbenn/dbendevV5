@@ -7,16 +7,32 @@
 
   <hello [isMobileView]="isMobileView"></hello>
 
+
+  <bars-break class="w-full"></bars-break>
+
+
   <skills
     class="w-full" 
     id="scroll-to-skills"
   ></skills>
+
+
+  <bars-break class="w-full"
+    [ngStyle]="{'margin-top': '15rem', 'margin-bottom': '0rem'}"
+  ></bars-break>
   
+
   <featured-projects
     [isMobileView]="isMobileView"
     [mobileViewWidth]="mobileViewWidth"
     id="scroll-to-projects"
   ></featured-projects>
+
+
+  <bars-break class="w-full"
+    [ngStyle]="{'margin-top': '20rem', 'margin-bottom': '0rem'}"
+  ></bars-break>
+
 
   <past-projects
     [isMobileView]="isMobileView"
@@ -24,6 +40,10 @@
   ></past-projects>
 
 
+  <bars-break class="w-full"
+    [ngStyle]="{'margin-top': '5rem', 'margin-bottom': '5rem'}"
+  ></bars-break>
+  
   
   <contact 
     class="w-full"

@@ -4,6 +4,13 @@
     border: 1px solid #00000013;
     box-shadow: 1px 8px 5px rgba(111, 111, 111, 0.142);
 }
+
+.text-clip {
+    -webkit-text-stroke-width: 2.0px;
+    // -webkit-text-stroke-color: rgba(0, 0, 0, 0.873);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
   
 .transparent {
     opacity: 0;

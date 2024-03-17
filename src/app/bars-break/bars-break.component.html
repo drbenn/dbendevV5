@@ -1,0 +1,50 @@
+<div class="">
+    <div                     
+        appObserveElement
+        #intersection="intersection"
+        (isIntersecting)="isIntersecting($event, 'bar-one')"
+        [isContinuous]="true"
+        [ngClass]="isBarOneInView ? 'visible-bar' : 'hidden-bar' "
+        [ngStyle]="isBarOneInView ? {
+                                        'width': barOneWidth, 
+                                        'transition-delay': '0ms',
+                                        'transition-duration': '600ms'
+                                    } 
+                                    : 
+                                    {
+                                        'width': '0%'
+                                    }
+                                    "
+    >
+    </div>
+    <div
+        class="mt-2"                  
+        [ngClass]="isBarOneInView ? 'visible-bar' : 'hidden-bar' "
+        [ngStyle]="isBarOneInView ? {
+                                        'width': barTwoWidth, 
+                                        'transition-delay': '50ms',
+                                        'transition-duration': '600ms'
+                                    } 
+                                    : 
+                                    {
+                                        'width': '0%'
+                                    }
+                                    "
+    >
+    </div>
+    <div
+    class="mt-2"                  
+    [ngClass]="isBarOneInView ? 'visible-bar' : 'hidden-bar' "
+    [ngStyle]="isBarOneInView ? {
+                                    'width': barThreeWidth, 
+                                    'transition-delay': '100ms',
+                                    'transition-duration': '600ms'
+                                } 
+                                : 
+                                {
+                                    'width': '0%'
+                                }
+                                "
+>
+</div>
+</div>

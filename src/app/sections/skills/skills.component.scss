@@ -6,6 +6,13 @@
     background-color: blue;
 }
 
+.text-clip {
+    -webkit-text-stroke-width: 2.0px;
+    // -webkit-text-stroke-color: rgba(0, 0, 0, 0.873);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
 
 
 @keyframes bounce {
@@ -25,27 +32,47 @@
     // border: 1px solid rgb(255, 255, 255);
     // background: linear-gradient(150deg, rgba(38, 74, 255, 0.374), rgba(255, 114, 250, 0.3));
     border-radius: 2px;
-    transform:
-        perspective(800px)
-        rotateY(10deg) scale(0.9)
-        rotateX(5deg);
+    // transform:
+    //     perspective(800px)
+    //     rotateY(10deg) scale(0.9)
+    //     rotateX(5deg);
     filter: opacity(90%);
     transition: 0.3s ease-out;
 }
 
 .skill:hover {
-    transform:
-        perspective(1200px)
-        rotateY(-10deg)
-        translateY(-5px)
-        rotateX(10deg)
-        scale(0.98);
+    // transform:
+    //     perspective(1200px)
+    //     rotateY(-10deg)
+    //     translateY(-5px)
+    //     rotateX(10deg)
+    //     scale(0.98);
+    //     filter: opacity(100%) hue-rotate(5deg) brightness(110%);
+
+        animation: skill-hover 1.5s ease-out;
+
+}
+
+@keyframes skill-hover {
+    0% {
+        transform: translateY(0px);
+        transform: scale(1);
+        filter: opacity(90%) hue-rotate(0deg) brightness(110%);
+    }
+    50% {
+        transform: translateY(-5px);
+        transform: scale(1.1);
         filter: opacity(100%) hue-rotate(5deg) brightness(110%);
+    }
+    100% {
+        transform: translateY(-5px);
+        transform: scale(1);
+        filter: opacity(90%) hue-rotate(0deg) brightness(110%);
+    }
 }
 
 .skill-anim {
     animation: skill-organize 1.5s ease-out;
-
 }
 
 

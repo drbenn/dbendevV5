@@ -17,7 +17,7 @@
         pAnimateOnScroll
         enterClass="fadeindown"
         leaveClass="fadeout"
-        class="animation-duration-500 text-7xl font-bold"
+        class="animation-duration-500 text-7xl font-bold text-clip"
         >
             Featured Project
         </div>
@@ -37,7 +37,7 @@
             <div class="flex flex justify-content-center align-items-center">
                 <img [src]="project.img" [alt]="project.title"
                     class="feature-border-shadow p-1"
-                    [ngStyle]="{'width': heroWidth, 'border-radius': heroRadius, 'filter': heroGrayscale }"
+                    [ngStyle]="{'width': heroWidth, 'border-radius': heroRadius, 'filter': heroGrayscale, 'min-width': '30rem' }"
                     
                     appObserveElement
                     #intersection="intersection"
@@ -47,14 +47,14 @@
             </div>
         </a>
 
-        <div>
+        <div class=" mx-6">
 
             <div class="w-full flex flex-column justify-content-start align-items-start text-800 mt-6">
                 <div
                     pAnimateOnScroll
                     enterClass="fadeinleft"
                     leaveClass="fadeout"
-                    class="animation-duration-500 text-2xl font-semibold"
+                    class="animation-duration-500 text-4xl font-semibold"
                 >
                     {{ project.title }}
                 </div>
@@ -74,7 +74,7 @@
                 pAnimateOnScroll
                 enterClass="fadeinleft"
                 leaveClass="fadeout"
-                class="animation-duration-500 text-base font-light mt-2"
+                class="animation-duration-500 text-base font-light mt-4"
                 >
                     {{ project.detail }}
                 </div>
@@ -86,7 +86,7 @@
             enterClass="zoomin"
             leaveClass="fadeout"
             
-            class="mb-2 font-light text-base animation-duration-500 ">
+            class="mt-4 font-light text-base animation-duration-500 ">
                 <a [href]="project.gitLink[0]" target="_blank">Link to GitHub repository</a>
             </div>
             <div *ngIf="project.demoLink && project.demoLink.length" 
@@ -94,9 +94,19 @@
             enterClass="zoomin"
             leaveClass="fadeout"
             
-            class="mb-2 font-light text-base animation-duration-500 ">
+            class="mt-1 mb-4 font-light text-base animation-duration-500 ">
                 <a [href]="project.demoLink" target="_blank">Link to demo</a>
             </div>
+
+            <div *ngIf="project.demoLink && project.demoLink.length" 
+            pAnimateOnScroll
+            enterClass="zoomin"
+            leaveClass="fadeout"
+            
+            class="mt-4 font-base text-base animation-duration-500 ">
+                Tech used:
+            </div>
+
             <div 
             pAnimateOnScroll
             enterClass="fadeinleft"

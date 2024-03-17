@@ -29,6 +29,7 @@ import { PastProjectsComponent } from './sections/past-projects/past-projects.co
 import { MyStoryComponent } from './sections/my-story/my-story.component';
 import {TooltipModule} from 'primeng/tooltip';
 import { AnimateOnScrollModule } from 'primeng/animateonscroll';
+import { BarsBreakComponent } from './bars-break/bars-break.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { AnimateOnScrollModule } from 'primeng/animateonscroll';
     HelloComponent,
     FeaturedProjectsComponent,
     PastProjectsComponent,
-    MyStoryComponent
+    MyStoryComponent,
+    BarsBreakComponent
   ],
   imports: [
     BrowserModule,

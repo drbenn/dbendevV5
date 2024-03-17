@@ -4,6 +4,13 @@
 
 }
 
+.text-clip {
+  -webkit-text-stroke-width: 2.0px;
+  // -webkit-text-stroke-color: rgba(0, 0, 0, 0.873);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .right-threejs-position {
   position: absolute;
   z-index: 3;
